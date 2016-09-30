@@ -36,6 +36,14 @@ same address in 2016, he announced the National Cancer Moonshot
 Initiative. Both were rightfully meant to focus attention on this
 problem.
 
+        In this thesis, I make use of
+        three large-scale multi-institutional consortium-based efforts and one
+        smaller-scale intra-institutional effort to idnetify impactful genomic
+        alternations using novel tools and approaches. First, I
+        outline the overall goals of the collection of this data,
+        which are twofold: 
+
+
 \section{Investigation}
 	In order to successfully use genomics data on a personal level
         for cancer treatment, much needs to be collected in order to
@@ -46,6 +54,7 @@ problem.
         seen as investigations towards understanding specific areas of
         unknown about the mechanisms of cancer onset and progression.
 
+
         \subsection{Identification of Molecular Subtypes}
 
 	One area of unknown is the existence of molecular subtypes of
@@ -55,7 +64,8 @@ problem.
         from which they originated. The Cancer Genome Atlas (TCGA)\cite{mclendon_comprehensive_2008}, a
         major consortium which gathered 11,000 tumor samples from 33
         classically-defined cancer types, aims to help assess this
-        difference.
+        difference. I later describe identification of impactful
+        features from one tumor type contained in TCGA. 
         
         Analyses under the TCGA, which gather sequencing data and compare it
         across tumor types, have made some findings that begin to suggest that
@@ -111,7 +121,15 @@ problem.
         understandings of (initiation and onset of tumor tissue
         (oncogenesis). In particular, the same general mutational patterns
         involving the same classes of genes are likely to have the ability to
-        initiate tumor-like properties across classical tumor types.
+        initiate tumor-like properties across classical tumor
+        types.
+
+        In the context of cancer genomics, mutations are defined as changes in the DNA of a
+        tumor that are not also present in the DNA of non-tumor
+        cells. These are sometimes termed ``somatic mutations,'' to
+        underscore their occurrence within the tumor tissue of the
+        individual in which they are detected, and are contrasted with
+        ``germline mutations.
 
 
         The major finding here in terms of subtypes was the stratification of
@@ -125,7 +143,7 @@ problem.
         mutational burden type, and two general oncogenic tumor
         categories.
         
-        \subsection{Assessing Clinical Utility of Molecular Subtypes}
+        \subsubsection{Assessing Clinical Utility of Molecular Subtypes}
 
         A further area of investigation is whether subtypes identified
         based on consistent molecular patterns have clinical utility.
@@ -146,7 +164,8 @@ problem.
         Encyclopaedia (CCLE)\cite{barretina_cancer_2012} and the Cancer
         Genome Project (CGP) \cite{ledford_end_2015} are testing a variety
         of new targeted therapies \textit{in vitro} in a relatively knowledge-agnostic
-        approach. Targeted therapies are pharmaceutical agents that
+        approach. I use data from both consortiums towards this goal,
+        as well. Targeted therapies are pharmaceutical agents that
         interrupt the activity of a particular molecular process,
         typically by interfering with a protein. As part of the
         rational development of cancer therapies, they are typically
@@ -158,7 +177,53 @@ problem.
         
         In particular, for  example, drugs targeting the epidermal growth factor receptor
         (EGF) pathway have been shown to be effective against multiple
-        different tumor tissues of origin.
+        different tumor tissues of origin
+        \cite{barretina_cancer_2012}.
+
+
+        \subsection{Assessing Relative Impact of Genetic and
+          Epigeneitc Changes}
+
+        A second area of open investigation is the role of epigenetics
+        in oncogenesis, tumor progression, and
+        metastasis. Epigenetic changes are consist of non-base-pair
+        DNA changes to the genome based on modification of the
+        genome's surroundings; in particular, chromatin can be opened
+        are closed via a myraid of mechanisms, such as histone
+       modifications and DNA methylation \todo{cite}.
+
+        These have an unknown degree of impact;
+        it is not known, for example, whether such changes
+        (``epimutations'') are sufficient for oncogenesis \todo{cite}. 
+
+        Towards that end, Dr. Joseph Costello, Ph.D. is spearheading a
+        University of California, San Francisco-based approach to
+        gather both genetic and epigenetic data on LGG tumors. He has
+        found already DNA methylation-based epigenetic changes
+        correspond closely with alternations in DNA base
+        pairs\cite{johnson_mutational_2014}. 
+
+        \subsection{Identification of Driver Mutations}
+
+        Another general goal of collecting genomic data from tumors,
+        and one of the first goals, has been the identification of
+        ``driver'' mutations. Driver mutations are DNA changes that
+        are  ``causally implicated
+        in oncogenesis''\cite{stratton_cancer_2009}. Driver mutations
+        are typically validated via \textit{in vitro} and \textit{in vivo}
+        experiments. The number of possible driver mutations is as
+        endless as the number of possible mutations, so therefore
+        candidate driver mutations need to be established in order to
+        narrow down the search space of possible drivers. 
+
+        One common prioritzation technique is to identify somatic
+        mutations that occur more often than what might be expected
+        based on chance (``recurrent mutations''). This technique
+        requires statistical power, necessitating, in turn, the
+        collection of many tumor samples. Several methods have been
+        adapted, such as \cite{leiserson_pan-cancer_2015}. Another 
+
+        
 
 
         
