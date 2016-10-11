@@ -52,7 +52,9 @@ problem.
         are several ongoing and recently completed large-scale efforts
         to collect this data in order to achieve this. These can be
         seen as investigations towards understanding specific areas of
-        unknown about the mechanisms of cancer onset and progression.
+        unknown about the mechanisms of (1) cancer onset (oncogenesis),
+        (2) progression, and (3) metastasis (spread to distant regions of
+        the body).
 
 
         \subsection{Identification of Molecular Subtypes}
@@ -197,7 +199,7 @@ problem.
         (``epimutations'') are sufficient for oncogenesis \todo{cite}. 
 
         Towards that end, Dr. Joseph Costello, Ph.D. is spearheading a
-        University of California, San Francisco-based approach to
+        University of California, San Francisco (UCSF)-based approach to
         gather both genetic and epigenetic data on LGG tumors. He has
         found already DNA methylation-based epigenetic changes
         correspond closely with alternations in DNA base
@@ -207,7 +209,7 @@ problem.
 
         Another general goal of collecting genomic data from tumors,
         and one of the first goals, has been the identification of
-        ``driver'' mutations. Driver mutations are DNA changes that
+        previously unobserved  ``driver'' mutations. Driver mutations are DNA changes that
         are  ``causally implicated
         in oncogenesis''\cite{stratton_cancer_2009}. Driver mutations
         are typically validated via \textit{in vitro} and \textit{in vivo}
@@ -220,8 +222,107 @@ problem.
         mutations that occur more often than what might be expected
         based on chance (``recurrent mutations''). This technique
         requires statistical power, necessitating, in turn, the
-        collection of many tumor samples. Several methods have been
-        adapted, such as \cite{leiserson_pan-cancer_2015}. Another 
+        collection of many tumor
+        samples\cite{leiserson_pan-cancer_2015}. In particular, power
+        is required to identify candidate driver mutations with either
+        low-impact or rare occurence. Many of these are believed to
+        exist, based on similar properties of variants detected during
+        the conceptually similar genome-wide association studies
+        (GWAS), which search for germline variants associated with a
+        particular phenotype, typically disease-related. 
+        
+        Further prioritization may be obtained based on somatic
+        mutation annotations, which may be based on prior knowledge of
+        a particular mutation's genomic context and its function. In particular,
+        intergenic status, knowledge of domain structure, or knowledge
+        of regulatory regions might be used to prioritize one
+        candidate driver mutation for testing over another. Most
+        somatic mutations are point mutations, although \todo{cite}
+        many will involve normally disparate genomic regions, which
+        are used in a similar fashion.
+
+        Many tools have been developed to harness this data, and many
+        have been applied to the specific datasets I explore later
+        (TCGA, CCLE, UCSF), including MuTect
+        \cite{cibulskis_sensitive_2013}.
+
+
+        \subsection{Assessing Relative Impact of Germline and Somatic Variants}
+
+        Some cancers are known to have a strong germline genetic component in
+        terms of incidence risk \todo{cite}; this is especially true of
+        childhood tumors. However, in general, it's unknown for all
+        cancer types how much of an effect germline variants, rather
+        than somatic mutations, have in terms of oncogenesis,
+        tumor progression, and metastases. This question can be probed
+        with large scale data        
+        involving matched normals, which allows the separation of
+        germline variants from somatic mutations and also the tracking
+        of tumor outcomes.
+
+        This is one of the aims of collecting sequencing data from glioma patients in the
+        Costello lab; importantly, follow-up information is present
+        for patients, which is nontrivial due to the high mean
+        survival time of such patients (on the scale of 10 years,
+        depending on molecular subtype).
+
+        \subsection{Molecular Mechanisms Explaining Variance in Treatment
+          Response}
+
+        In some cancer types, there exist a wide variance in how
+        patients respond to identical treatment and identical cancers
+        (modulo to classical clinical covariates). The molecular
+        reasons behind this are currently unknown in most cases.
+
+        \subsubsection{Gliomas}
+
+        This is especially true gliomas, and uncovering this is a
+        major aim for collecting surgical tissue by the Costello lab.
+
+        In particular, LGG patients of subtype astrocytoma (identified
+        based on histopathology) vary in their response to current
+        chemotherapeutic agents.
+
+        Typically, LGG patients are treated by (1) surgical resection
+        of the tumor, and (2) ``adjuvant'' chemotherapy. Chemotherapy
+        is typically temozolomide (TMZ), although may also be
+        procarbazine-lomustine-vincristine (PCV). The purpose of adjuvant chemotherapy is to kill remaining tumor tissue
+        that was not extracted during surgery, which is common due to
+        the difficulties of surgery in the context of vital brain
+        areas (eloquent regions) that cannot be easily removed or removed at all without
+        substantially decreasing the patient's quality of life.
+
+        LGG has an almost 100\% recurrence rate; surgical tissue
+        from the recurrent tumor (second surgery) is also collected by the Costello Lab
+        for further study. Some patients that receive adjuvant TMZ have been found to
+       progress to a higher grade of glioma
+       \cite{johnson_mutational_2014}, which is termed undergoing a
+       \textit{malignant transformation} (MT).
+
+       Towards the end of understanding why some patients undergo MT
+       whereas others don't, the Costello lab is looking for clues in
+       the genomic information collected on tumor tissue collected
+       during both sugeries.
+
+       One lead is a large fraction TMZ-treated patients that undergo MT 
+       have a drastically higher rate of DNA mutations than those that
+       do not undergo MT, termed \textit{hypermutation}. This suggests
+       the existence of one molecular pathway relating to the
+       deviating response to TMZ in these patients involving
+       hypermutation, possibly related to the inactivation of
+       particular DNA mismatch repair genes in these tumors.
+
+       An open question, then, is if this negative response (MT) can
+       be predicted based on surgical tissue collected during primary
+       tumors; this is one I attempt to investigate, and describe
+       later in this document. 
+       
+
+
+        
+
+        
+        
 
         
 
