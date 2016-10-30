@@ -379,12 +379,16 @@ problem.
 
       Increasingly, genomics data is being used clinically and
       therefore collected for the purpose of making treatment
-      decisions.
+      decisions on an individualized basis.
 
-      \subsubsection{Currently Identified Impactful Genomic Signatures
-        in Tumors}
+      \subsubsection{Gene Expression}
 
-      There are currently several genomic signatures from various
+      Genomic approaches for treatment prognostication and
+      stratification have focused on gene expression, often estimated through the use of microarray
+      or RNA-sequencing technologies which measure the abundance of
+      RNA in cells through sequencing. The successful discovery of a 231-gene expression signature in 2002 related to breast
+      cancer prognosis\cite{van_t_veer_gene_2002} spurred the search for signatures in various
+      tumor types for various outcomes. There are currently several genomic signatures from various
       tumor types that allow for patient stratification. Several
       metrics of interest exist in order to define \textit{impactful}
      from the context of making treatment decisions. Essentially, all
@@ -395,10 +399,78 @@ problem.
       tumor, and (4) susceptibility to specific events. Events of
       interest include (4.1) tumor progression, (4.2) tumor
       metastasis, which is closely related to (4.3) tumor
-      invasiveness, and (4) functional status of a particular
-      molecular pathway within a tumor (related to (2)).
+      invasiveness, (4.4) functional status of a particular
+      molecular pathway within a tumor (related to (2)), and (4.5)
+      likelihood of recurrence subsequent to tumor resectilevel
+      
+      In particular, several of these are currently used in the
+      clinic for prognostication, including
+      MammaPrint\textsuperscript{\textregistered} 70-gene signature and 
+      Genomic Health's OncotypeDX\textsuperscript{\textregistered}
+      21-gene signature for
+      breast cancer,
+      and Veracyte's Affirma\textsuperscript{\textregistered} for
+      thyroid cancer. These may be used to decide whether to provide
+      chemotherapy or other further follow-up treatment.
 
-      This -
+      \subsubsection{Somatic Mutations}
+      Somatic mutations are also increasingly used in the
+      clinic. Specific tests exist for signatures involving a few
+      genes such that they can be queried a patient-level without the use of
+      high-throughput sequencing. Common options include polymerase
+      chain reaction (PCR) or antibody stain of collected
+      tissues. Also, companies such as Foundation Genomics
+      \textsuperscript{\textregistered} perform large-scale targeted
+      sequencing for a handfull of genes known to be generally
+      impactful or targetable by specific therapies. Specific cancer
+      tests include avian erythroblastic leukemia viral oncogene
+      homolog 2 (ERBB2) for breast cancer via AviaraDx \textsuperscript{\textregistered}.
+
+      In gliomas, both of these methods are used; an antibody stain for Isocitrate Dehydrogenase 1
+      (IDH1) are being used in some clinics for prognostic tests,
+      including UCSF. In particular, IDH-wildtype gliomas have a
+      drastically lower survival time.
+      This is a proximal use of the tissue that is
+      further analyzed by sequencing and by the Costello lab. 
+
+      \subsubsection{DNA Methylation}
+
+      DNA methylation-based collection is relatively new for the use
+      of direct patient stratification; signatures exist for Acute
+      Myeloid Leukemia that relate to overall survival
+      \cite{figueroa_dna_2010}, but are not currently used
+      clinically. 
+
+      Gliomas are at the forefront of this, where the
+      status of the methylation of the promotoer of the
+      O\textsuperscript{6}-Guanine Methyltransferase (MGMT) gene is
+     queried by antibody, which has found to be prognostic. In particular, lack of
+      methylation here is associated with high MGMT activity and
+      therefore low chemotherapeutic benefit, so is often a major
+      component in treatment decisions \cite{rapkins_mgmt_2015}. This
+      was a proximal use of tumor tissue further analyzed by the
+      Costello lab and myself later in this document.
+
+
+      \subsubsection{Germline Variants}
+      Finally, properties of patients' germlines are occasionally used
+      for prognostication. In breast cancer, the appropriately titled
+      breast cancer 1 gene (BRCA1) and breast cancer 2 gene (BRCA2)
+      are queried for prognosis, as there are known heritable
+      deactivating mutations in these tumor-suppressor genes. In
+      gliomas, there is a known heritability of MGMT-methylation
+      response, although this is not currently linked strongly enough
+      to germline variants in order to be used clinically.
+
+      \subsection{Integrated Sequencing Methods}
+
+      Integration of features are not currently used for
+      stratification, although multi-type signatures have been
+      collected by CCLE and CGP relating to response to targeted
+      therapies, as outlined above. 
+      
+
+      
 
 
 
