@@ -1,0 +1,27 @@
+;; RefTeX parse info file
+;; File: /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap3.tex
+;; User: ijoseph (Isaac C. Joseph)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags)
+
+(is-multi nil)
+
+(bibview-cache ("bray_near-optimal_2016" . "Bray etal. Near Optimal Probabilistic {{RNA}} Seq, 34:525") ("beaumeunier_role_2015" . "Beaumeunier etal. {{Rol. {{Mach. Learn. {{Find. Chim., in: 2015 26th {{International Workshop}}, 26") ("gingeras_implications_2009" . "Gingeras Implications Chimaeric Non Co Linear, 461:206") ("li_gene_2009" . "Li etal. Gene Fusions {{RNA}} Trans Splicing, 8:218") ("kumar_identifying_2016" . "Kumar etal. Ident. Fusi. Transcr. Using next, n/a") ("ozsolak_rna_2011" . "Ozsolak & Milos {{RNA}} Sequencing: Advances  Challenges, 12:87") ("_comprehensive_2015" . "Compr.  {{Int. Genom. Analys., 0:null") ("barretina_cancer_2012" . "Barretina etal. {{Canc. Cell Line Encycl. Enabl., 483:603") ("weinstein_cancer_2013" . "Weinstein etal. {{Cancer Genome Atlas Pan}} {{Cancer, 45:1113") ("chin_cancer_2011" . "Chin etal. Cancer Genomics: From Discovery Science, 17:297") ("rowley_new_1973" . "Rowley New Cons. Chrom. Abnorm. Chron") ("yunis_constitutive_1984" . "Yunis & Soreng Constitutive Fragile Sites Cancer, 226:1199") ("stratton_cancer_2009" . "Stratton etal. Cancer Genome, 458:719") ("hanahan_hallmarks_2000" . "Hanahan & Weinberg {{Hallmarks}} {{Cancer}}, 100:57"))
+
+(master-dir . "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/")
+
+(label-numbers)
+
+(bof "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap3.tex")
+
+(toc "toc" "  1 Identifying impactful fusion genes: fusion expression analysis" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap3.tex" nil 1 "1" "\\chapter{Identifying impactful fusion genes: fusion expression
+  analysis}" 1)
+
+(eof "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap3.tex")
+))
+

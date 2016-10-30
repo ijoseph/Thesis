@@ -1,0 +1,39 @@
+;; RefTeX parse info file
+;; File: /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap1.tex
+;; User: ijoseph (Isaac C. Joseph)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags)
+
+(is-multi nil)
+
+(bibview-cache ("figueroa_dna_2010" . "Figueroa etal. {{DNA Methyl. Sign. Ident. Biol., 17:13") ("rapkins_mgmt_2015" . "Rapkins etal. {{MGMT}} Prom. {{SNP}} rs16906252 Risk, nov064") ("van_t_veer_gene_2002" . "van 't Veer etal. Gene Expr. Prof. Pred. Clin., 415:530") ("stratton_cancer_2009" . "Stratton etal. Cancer Genome, 458:719") ("johnson_mutational_2014" . "Johnson etal. Mutat. {{An. Reve. {{Or. {{Th., 343:189") ("ledford_end_2015" . "Ledford End Cancer Genome Project Prompts, 517:128") ("barretina_cancer_2012" . "Barretina etal. {{Canc. Cell Line Encycl. Enabl., 483:603") ("weinstein_cancer_2013" . "Weinstein etal. {{Cancer Genome Atlas Pan}} {{Cancer, 45:1113") ("mclendon_comprehensive_2008" . "McLendon etal. Compr. Genom. Char. Defin. Human, 455:1061") ("marabita_evaluation_2013" . "Marabita etal. An Evaluation Analysis Pipelines {{DNA}}, 8:333") ("temp_placeholder_2016" . "temp Placeholder") ("ashburner_high-dimensional_1999" . "Ashburner etal. High Dimens. Image Registr. Using, 9:619"))
+
+(master-dir . "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/")
+
+(label-numbers)
+
+(bof "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap1.tex")
+
+(toc "toc" "  1 Goal of collecting genomic data from cancers" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap1.tex" nil 1 "1" "\\chapter{Goal of collecting genomic data from cancers}" 1)
+
+(toc "toc" "    1.1 Context" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap1.tex" nil 2 "1.1" "\\section{Context}" 57)
+
+(toc "toc" "    1.2 Investigation" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap1.tex" nil 2 "1.2" "\\section{Investigation}" 2289)
+
+(toc "toc" "      1.2.1 Identification of Molecular Subtypes" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap1.tex" nil 3 "1.2.1" "\\subsection{Identification of Molecular Subtypes}" 2871)
+
+(toc "toc" "        1.2.1.1 Assessing Clinical Utility of Molecular Subtypes" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap1.tex" nil 4 "1.2.1.1" "\\subsubsection{Assessing Clinical Utility of Molecular Subtypes}" 7859)
+
+(toc "toc" "      1.2.2 Assessing Relative Impact of Genetic and Epigeneitc Changes" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap1.tex" nil 3 "1.2.2" "\\subsection{Assessing Relative Impact of Genetic and
+          Epigeneitc Changes}" 9940)
+
+(toc "toc" "      1.2.3 Identification of Driver Mutations" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap1.tex" nil 3 "1.2.3" "\\subsection{Identification of Driver Mutations}" 11023)
+
+(eof "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap1.tex")
+))
+
