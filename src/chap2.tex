@@ -1,66 +1,170 @@
-\chapter{Placental Ionosphere}
+\chapter{Properties of Analyzed Data}
 
-\section{Pigeonhole Buckthorn}
+Data from several sources were analyzed for the purposes of
+identifying impactful sequencing-accessible changes. In particular,
+data from TCGA \cite{_comprehensive_2015}, the Costello Lab at
+UCSF\cite{johnson_mutational_2014} and the Cancer Cell Line
+Encyclopaedia\cite{barretina_cancer_2012} were used. 
 
-Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.
-Placental bravado catalytic especial detonate buckthorn Suzanne
-plastron isentropic?  Glory characteristic.  Denature?  Pigeonhole
-sportsman grin historic stockpile. Doctrinaire marginalia and art.
-Sony tomography.
+\section{The Cancer Genome Atlas}
 
-\begin{figure}\centering
-\parbox{.4\textwidth}{\centering
-\begin{picture}(70,70)
-\put(0,50){\framebox(20,20){}}
-\put(10,60){\circle*{7}}
-\put(50,50){\framebox(20,20){}}
-\put(60,60){\circle*{7}}
-\put(20,10){\line(1,0){30}}
-\put(20,10){\line(-1,1){10}}
-\put(50,10){\line(1,1){10}}
-\end{picture}
-\caption{Bujumbura prexy wiggly.}}
-\hfill
-\parbox{.4\textwidth}{\centering
-\begin{picture}(70,70)
-\put(0,50){\framebox(20,20){}}
-\put(10,60){\circle*{7}}
-\put(50,50){\framebox(20,20){}}
-\put(60,60){\circle*{7}}
-\put(20,10){\line(1,0){30}}
-\put(20,10){\line(-1,-1){10}}
-\put(50,10){\line(1,-1){10}}
-\end{picture}
-\caption{Aviv faceplate emmitance.}}
-\end{figure}
+Data from TCGA LGG were used to assess the fusion transcript
+expression estimation tool described in chapter 3. $289$ tumors were
+analyzed by the TCGA LGG Analysis Working Group (AWG). 
 
-Aviv censor seventh, conjugal.  Faceplate emittance borough airline.
-Salutary.  Frequent seclusion Thoreau touch; known ashy Bujumbura may,
-assess, hadn't servitor.  Wash, Doff, or Algorithm.
+\subsection{Molecular Information}
 
-Denature and flaxen frightful supra sailor nondescript cheerleader
-forth least sashay falconry, sneaky foxhole wink stupefy blockage and
-sinew acyclic aurora left guardian.  Raffish daytime; fought ran and
-fallible penning.
+\subsubsection{RNA-sequencing}
+RNA-sequencing protocol was standardized across TCGA data collection
+centers. In particular, total RNA extraction was performed using $5 \times 10^6$
+cells using Ambion\textsuperscript{\textregistered}
+Ribopure\textsuperscript{\texttrademark} kit. Reads were sequenced
+with Illumina\textsuperscript{\textregistered}
+HiSeq\textsuperscript{\texttrademark} sequencers, collecting
+$2 \times 50$ base-pair paired-end reads. 
 
-\section{Pinwheel Thresh}
+\subsubsection{Exome sequencing}
+Exome sequencing on tumor tissue was performed using $0.5$ to $3
+\mug$ of DNA from tumor and normal blood, respectively. The
+Agilent\reg  Sure-Select Human All Exon \tm v.20, 44 MB kit was used
+for exome region-targeting, and $2 \times 76$ base-pair paired-end
+sequencing reads were used, again with Illumina\reg HiSeq\tm
+sequencers.
 
-Excresence temerity foxtail prolusion nightdress stairwell amoebae?
-Pawnshop, inquisitor cornet credulous pediatric?  Conjoin.  Future
-earthmen.  Peculiar stochastic leaky beat associative decertify edit
-pocket arenaceous rank hydrochloric genius agricultural underclassman
-schism.  Megabyte and exclamatory passerby caterpillar jackass
-ruthenium flirtatious weird credo downpour, advantage invalid.
 
-\section{Laryngeal Gallon Mission}
+\subsubsection{Deep whole-genome sequencing}
+This was performed on $21$ of the $289$ samples. $2 \times 101$ base-pair paired-end reads were used on the same
+sequencing platform as exome sequencing.
 
-Conformance and pave.  Industrial compline dunk transept edifice
-downstairs.  Sextillion.  Canvas?  Lyricism webbing insurgent
-anthracnose treat familiar.  Apocalyptic quasar; ephemerides
-circumstantial.
+\subsubsection{``Low-pass'' whole-genome sequencing}
 
-Peridotite giblet knot.  Navigable aver whee sheath bedraggle twill
-era scourge insert.  Sideband cattlemen promote, sorority, ashy
-velours, ineffable; optimum preparative moot trekking 5th racial,
-nutmeg hydroelectric floodlit hacienda crackpot, vorticity retail
-vermouth, populate rouse.  Ceremony?  Fungoid.
+This was performed on $52$ of the $289$ samples. Here, $0.5$ to $0.7\mu g$ of DNA were extracted, then KAPA Biosystems\reg
+kits were used for preparation. $2 \times 51$ base-pair pari-end reads
+were produced with Illumina\reg HiSeq\tm, producing $5.2 \times$
+average coverage. $39.5$ average Phred quality score was achieved,
+with a $96.5\%$ average mapping rate.
+
+\subsection{Clinical Information} 
+
+In order assess the impact of sequencing data relative to various
+outcomes and to also correlate various molecular features with known
+features, classical clinical information was obtained in addition to
+the molecular inforation. In particular, histologic type, age of
+diagnosis, race, year of diagnosis, family history of cancer, extent
+of tumor resection, tumor location, white matter percentage, and first
+presenting symptom were collected from all of the $289$ patients, with
+a few omissions. Most notable in terms of fusion expression analysis
+was survival time, which correlated molecular tumor type and
+relatedly, the existence of fusions of interest.
+
+\subsection{Resulting datatypes and details of processing}
+
+The above molecular information was processed, resulting in several
+different high-level genomic features.
+
+\subsubsection{DNA rearrangements}
+
+Several different DNA rearrangements sets were estimated from data;
+these were used in order to prioritize resultant FJs.
+\begin{description}
+\item[genome-wide]
+  Two sets of genome-wide (as opposed to exome-limited) DNA
+  rearrangements were produced.
+
+  
+  \textbf{deep-sequencing-based}
+
+  
+Here, BamBam\cite{sanborn_double_2013} was used to estimate
+rearrangements based on exome-sequencing and deep whole-genome
+sequencing reads. These reads were aligned and processed using the aligners
+of BWA \todo{cite BWA} and Picard \todo{cite}/ Broad Institute
+Firehose \todo{cite}.
+  
+\textbf{shallow-sequencing-based}
+
+As deep sequencing was only available on a minority of samples,
+shallow (``low-pass'') sequencing was also used to call DNA
+rearrangements.
+
+For this purpose, the CASAVA \todo{cite} tool was used, along with BWA for mapping
+and BreakDancer\cite{chen_breakdancer_2009} and Meerkat \todo{cite}.
+
+
+
+
+\item[genic regions]
+
+As more sequencing data was available to support genic region-based
+rearrangemnets, this was used to estimate rearrangemnets that was
+directly applicable to FJs.
+
+\textbf{MapSplice}
+MapSplice\cite{wang_mapsplice:_2010} was used to call FJs as part of
+the general RNA-seq alignment pipeline.
+
+
+\textbf{deFuse}
+deFuse\cite{mcpherson_defuse:_2011} was used by the Haussler lab at UCSC in order to call FJs from
+RNA-sequencing data. As part of the deFuse pipeline, TopHat\todo{cite}
+was used, along with a support vector machine (SVM) classifier to
+assess the probability of fusion existence based on priors collected
+by a test set.
+
+Reads were further filtered by Drs. Olena Morozova and Sofie Salama at
+UCSC based on criteria outlined in \ref{filtering}. 
+
+\begin{table} 
+	\begin{center}
+          \begin{tabular}{|c|c|}
+            \textbf{Criterion} & \textbf{Accepted Value} \\ \hline
+            split reads & $\geq 3$ \\
+            spanning reads - split reads & $\geq 0$\\
+            probability from SVM classifier & $ > 0.65$\\
+            read through event & \texttt{false}\\
+            p-value from supporting reads' production from other
+            genomic areas & $\leq 0.1$ \\
+            fraction of supporting reads that are repetitive sequence
+                               & $< 0.78$\\
+            number of spanning reads & $> 1$
+          \end{tabular}
+           \end{center}          
+          \caption{Criteria for filtering fusions downstream of
+                   deFuse} \label{filtering}
+               \end{table}
+               
+
+
+\end{description}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
