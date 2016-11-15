@@ -4,47 +4,48 @@ Data from several sources were analyzed for the purposes of
 identifying impactful sequencing-accessible changes. In particular,
 data from TCGA \cite{_comprehensive_2015}, the Costello Lab at
 UCSF\cite{johnson_mutational_2014} and the Cancer Cell Line
-Encyclopaedia\cite{barretina_cancer_2012} were used. 
+Encyclopaedia\cite{barretina_cancer_2012} were used.
 
 \section{The Cancer Genome Atlas}
 
 Data from TCGA LGG were used to assess the fusion transcript
 expression estimation tool described in chapter 3. $289$ tumors were
-analyzed by the TCGA LGG Analysis Working Group (AWG). 
+analyzed by the TCGA LGG Analysis Working Group (AWG).
 
-\subsection{Molecular Information}
+\subsection{Raw Molecular Information}
 
 \subsubsection{RNA-sequencing}
 RNA-sequencing protocol was standardized across TCGA data collection
-centers. In particular, total RNA extraction was performed using $5 \times 10^6$
-cells using Ambion\textsuperscript{\textregistered}
+centers. In particular, total RNA extraction was performed using
+$5 \times 10^6$ cells using Ambion\textsuperscript{\textregistered}
 Ribopure\textsuperscript{\texttrademark} kit. Reads were sequenced
 with Illumina\textsuperscript{\textregistered}
 HiSeq\textsuperscript{\texttrademark} sequencers, collecting
-$2 \times 50$ base-pair paired-end reads. 
+$2 \times 50$ base-pair paired-end reads.
 
 \subsubsection{Exome sequencing}
-Exome sequencing on tumor tissue was performed using $0.5$ to $3
-\mug$ of DNA from tumor and normal blood, respectively. The
-Agilent\reg  Sure-Select Human All Exon \tm v.20, 44 MB kit was used
-for exome region-targeting, and $2 \times 76$ base-pair paired-end
-sequencing reads were used, again with Illumina\reg HiSeq\tm
-sequencers.
+Exome sequencing on tumor tissue was performed using $0.5$ to $3 \mug$
+of DNA from tumor and normal blood, respectively. The Agilent\reg
+Sure-Select Human All Exon \tm v.20, 44 MB kit was used for exome
+region-targeting, and $2 \times 76$ base-pair paired-end sequencing
+reads were used, again with Illumina\reg HiSeq\tm sequencers.
 
 
 \subsubsection{Deep whole-genome sequencing}
-This was performed on $21$ of the $289$ samples. $2 \times 101$ base-pair paired-end reads were used on the same
-sequencing platform as exome sequencing.
+This was performed on $21$ of the $289$ samples. $2 \times 101$
+base-pair paired-end reads were used on the same sequencing platform
+as exome sequencing.
 
 \subsubsection{``Low-pass'' whole-genome sequencing}
 
-This was performed on $52$ of the $289$ samples. Here, $0.5$ to $0.7\mu g$ of DNA were extracted, then KAPA Biosystems\reg
-kits were used for preparation. $2 \times 51$ base-pair pari-end reads
-were produced with Illumina\reg HiSeq\tm, producing $5.2 \times$
-average coverage. $39.5$ average Phred quality score was achieved,
-with a $96.5\%$ average mapping rate.
+This was performed on $52$ of the $289$ samples. Here, $0.5$ to
+$0.7\mu g$ of DNA were extracted, then KAPA Biosystems\reg kits were
+used for preparation. $2 \times 51$ base-pair pari-end reads were
+produced with Illumina\reg HiSeq\tm, producing $5.2 \times$ average
+coverage. $39.5$ average Phred quality score was achieved, with a
+$96.5\%$ average mapping rate.
 
-\subsection{Clinical Information} 
+\subsection{Clinical Information}
 
 In order assess the impact of sequencing data relative to various
 outcomes and to also correlate various molecular features with known
@@ -67,96 +68,436 @@ different high-level genomic features.
 Several different DNA rearrangements sets were estimated from data;
 these were used in order to prioritize resultant FJs.
 \begin{description}
-\item[genome-wide]
-  Two sets of genome-wide (as opposed to exome-limited) DNA
-  rearrangements were produced.
+\item[genome-wide] Two sets of genome-wide (as opposed to
+  exome-limited) DNA rearrangements were produced.
 
   
   \textbf{deep-sequencing-based}
 
   
-Here, BamBam\cite{sanborn_double_2013} was used to estimate
-rearrangements based on exome-sequencing and deep whole-genome
-sequencing reads. These reads were aligned and processed using the aligners
-of BWA \todo{cite BWA} and Picard \todo{cite}/ Broad Institute
-Firehose \todo{cite}.
+  Here, BamBam\cite{sanborn_double_2013} was used to estimate
+  rearrangements based on exome-sequencing and deep whole-genome
+  sequencing reads. These reads were aligned and processed using the
+  aligners of BWA \todo{cite BWA} and Picard \todo{cite}/ Broad
+  Institute Firehose \todo{cite}.
   
-\textbf{shallow-sequencing-based}
+  \textbf{shallow-sequencing-based}
 
-As deep sequencing was only available on a minority of samples,
-shallow (``low-pass'') sequencing was also used to call DNA
-rearrangements.
+  As deep sequencing was only available on a minority of samples,
+  shallow (``low-pass'') sequencing was also used to call DNA
+  rearrangements.
 
-For this purpose, the CASAVA \todo{cite} tool was used, along with BWA for mapping
-and BreakDancer\cite{chen_breakdancer_2009} and Meerkat \todo{cite}.
-
-
-
-
-\item[genic regions]
-
-As more sequencing data was available to support genic region-based
-rearrangemnets, this was used to estimate rearrangemnets that was
-directly applicable to FJs.
-
-\textbf{MapSplice}
-MapSplice\cite{wang_mapsplice:_2010} was used to call FJs as part of
-the general RNA-seq alignment pipeline.
+  For this purpose, the CASAVA \todo{cite} tool was used, along with
+  BWA for mapping and BreakDancer\cite{chen_breakdancer_2009} and
+  Meerkat \todo{cite}.
 
 
-\textbf{deFuse}
-deFuse\cite{mcpherson_defuse:_2011} was used by the Haussler lab at UCSC in order to call FJs from
-RNA-sequencing data. As part of the deFuse pipeline, TopHat\todo{cite}
-was used, along with a support vector machine (SVM) classifier to
-assess the probability of fusion existence based on priors collected
-by a test set.
-
-Reads were further filtered by Drs. Olena Morozova and Sofie Salama at
-UCSC based on criteria outlined in \ref{filtering}. 
-
-\begin{table} 
-	\begin{center}
-          \begin{tabular}{|c|c|} \hline
-            \textbf{Criterion} & \textbf{Accepted Value} \\ \hline
-            split reads & $\geq 3$ \\
-            spanning reads - split reads & $\geq 0$\\
-            probability from SVM classifier & $ > 0.65$\\
-            read through event & \texttt{false}\\
-            p-value from supporting reads' production from other
-            genomic areas & $\leq 0.1$ \\
-            fraction of supporting reads that are repetitive sequence
-                               & $< 0.78$\\
-            number of spanning reads & $> 1$ \\ \hline
-          \end{tabular}
-           \end{center}          
-          \caption{Criteria for filtering fusions downstream of
-                   deFuse} \label{filtering}
-               \end{table}               
 
 
+\item[intragenic]
+
+  As more sequencing data was available to support genic region-based
+  rearrangemnets, this was used to estimate rearrangemnets that was
+  directly applicable to FJs.
+
+  \textbf{MapSplice pipeline} MapSplice\cite{wang_mapsplice:_2010} was
+  used to call FJs as part of the general RNA-seq alignment pipeline.
+
+
+  \textbf{deFuse pipeline} deFuse\cite{mcpherson_defuse:_2011} was
+  used by the Haussler lab at UCSC in order to call FJs from
+  RNA-sequencing data. As part of the deFuse pipeline,
+  TopHat\todo{cite} was used, along with a support vector machine
+  (SVM) classifier to assess the probability of fusion existence based
+  on priors collected by a test set.
+
+  Reads were further filtered by Drs. Olena Morozova and Sofie Salama
+  at UCSC based on criteria outlined in \ref{filtering}. Beyond
+  \ref{filtering}, specific FJs bisecting (1) protein kinases, which
+  have a known role in higher-grade gliomas and (2) genes
+  significantly mutated by smaller mutations were prioritized for
+  validation.
+
+  \begin{table}
+    \begin{center}
+      \begin{tabular}{|c|c|} \hline \textbf{Criterion} &
+        \textbf{Accepted Value} \\ \hline
+        split reads & $\geq 3$ \\
+        spanning reads - split reads & $\geq 0$\\
+        probability from SVM classifier & $ > 0.65$\\
+        read through event & \texttt{false}\\
+        p-value from supporting reads' production from other
+        genomic areas & $\leq 0.1$ \\
+        fraction of supporting reads that are repetitive sequence
+                                                       & $< 0.78$\\
+        number of spanning reads & $> 1$ \\ \hline
+      \end{tabular}
+    \end{center}
+    \caption{Criteria for filtering fusions downstream of
+      deFuse} \label{filtering}
+  \end{table}
+
+  \textbf{PRADA pipeline}
+
+  PRADA was developed and used by collaborators at the MD Anderson Cancer Center as
+  an independent method of assessing fusions to increase
+  confidence. Briefly, the pipeline involves RNA-seq read alignment,
+  followed by filtering by the following shown in \ref{prada_filtering} 
+
+  \begin{table}
+    \begin{center}
+      \begin{tabular}{|c|c|} \hline \textbf{Criterion} &
+        \textbf{Accepted Value} \\ \hline
+        exon-connecting reads & $ > 1$ \\
+        spanning reads & $> 2$\\
+        \texttt{BLASTN}\todo{cite}-computed inter-constituent sequence
+                                                       similarity & $
+                                                                    <0.01$\\ \hline
+      \end{tabular}
+    \end{center}
+    \caption{Criteria for filtering fusions as part of PRADA pipeline} \label{prada_filtering}
+  \end{table}   
+\end{description}
+
+
+\subsubsection{Gene expression}
+
+Gene expression data was used to validate and prioritize fusions for
+further fusion-transcript-gnostic expression estimation. Gene
+expression resulted from RNA-sequencing data and was produced based on
+the following pipeline:
+
+\begin{enumerate}
+\item MapSplice for mapping \cite{wang_mapsplice:_2010}
+  
+\item RSEM\cite{li_rsem:_2011} for expression estimation
+  
+\item Filtering to genes expressed in $\geq 70\%$ of samples
+  
+\item $\log_2$ transformation  
+\item Median-centering across samples
+\end{enumerate}
+
+\section{UCSF Department of Neurosurgery (Costello Lab) Samples}
+
+Roughly one hundred samples ($86$ at time of writing) were collected by the UCSF department of
+neurosurgery and analysed further by the Costello lab. Roughly fifty
+($48$ at time of writing) of these are relevant to the prediction problem that I formulate in
+chapter $4$, based on arising from patients with adjuvant Temozolomide
+chemotherapy. 
+
+\subsection{Raw Molecular Information}
+\subsubsection{Matched normal samples} \label{matched_normal}
+For roughly $40$ of the patients, samples from circulating blood were
+taken and sequenced via a targeted exome sequencing platform with
+Illumina$\reg$ reads.
+
+\subsubsection{Primary tumor samples}
+Primary tumor samples were tumor samples collected from the first
+surgery for LGG patients. This was used in later analyses for the
+purpose of prognostication regarding outcomes following primary
+surgery. 
+
+On several patients, several tumor sections from one tumor were
+sampled in order to assess intratumoral heterogeneity. On a minority
+of these, sections were chosen to maximize variance of metabolic
+positron-emission tomography (PET)-based imaging as a proxy to maximize genetic variance of sections.
+
+In detail, PET assessed the presence of choline, which is a marker
+for cell membranes. Cell membrane existence is a marker of cell
+turnover and therefore a marker fo tumor growth.
+
+Choline is related to lipid isocitrate dehydrogenase 1 (IDH1)
+operation metabolism, which is known to be altered in some gliomas, so
+is particularly relevant for glioma metabolic assessment. 
+
+\begin{description}
+
+\item[Exome sequencing] For $27$ patients, exome sequencing was
+  performed on at least one section of tumor tissue using identical
+  protocol to \ref{matched_normal}.
+
+  
+\item[RNA-sequencing] For around ten patients, RNA-sequencing data was
+  collected using Illumina\ref paired-end read sequencing
+  protocols. RNA-seq was not performed on more patients due to
+  degradation of RNA.
+
+  
+\item[Human methylation 450k array] For roughly $20$ patients, the
+  Infinium\reg HumanMethylation450 BeadChip Kit\tm (450k) was used to assess
+  CpG methylation at around $500,000$ probe sites.
+  
+\end{description}
+
+
+\subsubsection{Secondary Tumor Samples}
+
+Tumor samples were collected from secondary and following surgeries if
+available; the same datatypes were available as was available on
+primary tumor samples.
+
+\subsection{Resulting datatypes and processing details}
+\subsubsection{Germline Variants}
+Germline variants were assessed from exome sequencing of the normal
+tumor blood samples and processed via the GATK Unified genotype
+\todo{cite GATK}. Briefly, this method works by aligning reads and
+producing variants at sites differing from an input reference, and
+results in a list of called variants for every sample on a base-pair
+resolution.
+
+
+\subsubsection{DNA methylation}
+Raw probe intensity values were processed by
+\texttt{Methylumi}\cite{davis_package_2013}. In detail, probes were
+normalized by removing probes with high p-values for detection tests,
+then background-corrected. Sex chromosomes were filtered, as were
+probes mapping to SNPs and probes mapping to multiple genomic
+locatons.
+
+This resulted in per-sample vectors of $\beta$ values representing average methylation level
+of CpG site across a sample.
+
+\subsubsection{DNA copy number}
+
+Genomic copy number segments are called from exome-sequencing
+information due to newly developed pipelines, and validated with
+intensity information from 450k.
+
+This results in segments of floating point-numer representing copy
+number, averaged across cells in a sample. To further process, we took
+floating point numbers more than $0.5$ away from $2$.
+
+\subsubsection{Somatic Mutations}
+
+Somatic mutations were called based on combining normal and tumor
+exome-sequencing information, using GATK \todo{cite}. This results
+each variant of one or more nucleotides on a base-pair resolution
+between tumor and normal sequencing information.
+
+There were a group of ampels where the number of mutations was more than $10 \times$
+higher, on average, than the other group of samples; these samples
+were considered to having undergone \textit{hypermutation} (HM). 
+
+\subsubsection{RNA-sequencing}
+
+RNA-seq data was analyzed via a pipeline using
+Kallisto\cite{bray_near-optimal_2016} to generate expresion
+estimates. 
+
+\subsection{Clinical Information}
+
+A wealth of clinical information is available on the patients. This
+was used to select an appropriate molecular phenotype that accorded
+well with clinical outcomes. HM was selected as being
+related to malignant transformation and relatedly, decreased survival
+time.
+
+Clinical information was also used as a predictor for the HM. See
+\ref{avail_clin} for details.
+
+
+  \begin{table}
+    \begin{center}
+      \begin{tabular}{|c|c|} \hline \textbf{Type} &
+        \textbf{Unit} \\ \hline
+        age & binned into $5$-year intervals \\
+        tumor location & $\in$ \{frontal, parietal\} \\
+        extent of resection & $\in$ \{gross total (GTR), subtotal (STR)\} \\
+        length of TMZ cycles & months \\
+        time between surgery and TMZ administration & months \\
+        time between TMZ administration and recurrence & months \\
+        gender & $\in$ \{male, female, neither\}\\ \hline 
+      \end{tabular}
+    \end{center}
+    \caption{Clinical information available} \label{avail_clin}
+  \end{table}
+
+
+\section{Cancer Genome Project}
+
+The cancer genome project is a major consortium effort led by the Wellcome
+Trust Sanger Institute to assess the sensitivity of various cancer
+types (\ref{cgp_types}) to existing pharmaceutical therapies.
+
+
+\subsection{Cancer Types}
+
+At least one cell line each of from $29$ cancer types were used (\ref{cgp_types}).
+resulting in $1,001$ different samples. 
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|} \hline
+\textbf{Names} \\ \hline
+Adrenocortical carcinoma\\
+Acute lymphoblastic leukemia\\
+Bladder Urothelial Carcinoma\\
+Breast invasive carcinoma\\
+Cervical squamous cell carcinoma and endocervical adenocarcinoma\\
+Chronic Lymphocytic Leukemia\\
+Colon adenocarcinoma and Rectum adenocarcinoma\\
+Lymphoid Neoplasm Diffuse Large B-cell Lymphoma\\
+Esophageal carcinoma\\
+Glioblastoma multiforme\\
+Head and Neck squamous cell carcinoma\\
+Kidney renal clear cell carcinoma\\
+Acute Myeloid Leukemia\\
+Chronic Myelogenous Leukemia\\
+Brain Lower Grade Glioma\\
+Liver hepatocellular carcinoma\\
+Lung adenocarcinoma\\
+Lung squamous cell carcinoma\\
+Medulloblastoma\\
+Mesothelioma\\
+Multiple Myeloma\\
+Neuroblastoma\\
+Ovarian serous cystadenocarcinoma\\
+Pancreatic adenocarcinoma\\
+Prostate adenocarcinoma\\
+Small Cell Lung Cancer\\
+Skin Cutaneous Melanoma\\
+Stomach adenocarcinoma\\
+Thyroid carcinoma\\
+Uterine Corpus Endometrial Carcinoma\\ \hline
+\end{tabular}
+\end{center}
+\caption{Cancer Genome Project Tumor Types for Derived Cell Lines} \label{cgp_types}
+\end{table}
+
+\subsection{Compounds Information}
+
+\subsubsection{Raw Compound Details}
+
+A total of 265 compounds were tested, consisting both of drugs under
+investigation and established therapeutics. The compounds can be
+considered in several categories based on their molecular targets (\ref{cmpnds}) if
+available. Broadly, compounds were categorized as cytotoxic or
+targeted.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|} \hline
+\textbf{Categories} \\ \hline
+ABL signaling\\
+DNA replication\\
+EGFR signaling\\
+ERK MAPK signaling\\
+Genome integrity\\
+IGFR signaling\\
+JNK and p38 signaling\\
+PI3K signaling\\
+RTK signaling\\
+TOR signaling\\
+WNT signaling\\
+apoptosis regulation\\
+cell cycle\\
+chromain  histone acetylation\\
+chromatin  histone methylation\\
+chromatin  other\\
+cytoskeleton\\
+metabolism\\
+mitosis\\
+other\\
+p53 pathway \\ \hline
+\end{tabular}
+\end{center}
+\caption{Cancer Genome Project Compound Categories} \label{cmpnds}
+\end{table}
+
+We focus on analysis of the DNA replication and Cytoskeleton-based
+categories, both of which are the only cytotoxic classes tested; the
+rationale for this was that these might be more similar to the
+phenotype of interest in UCSF datasets.
+
+\subsubsection{Resulting Sensitivity Estimates}
+
+For each combination of compound and cell line, a call of
+\texttt{resistant} or \texttt{sensitive} was made based on the
+half maximal inhibitory concentration $\text{IC}_{50}$ values.
+
+A heuristic outlier procedure with the following steps was used for
+each compound:
+
+\begin{description}
+\item[1. upsampling]
+  For each cell line, a normal distribution was fit with mean equal to
+  the average $\text{IC}_{50}$ over the different samples, and
+  standard deviation equivalent to a $68\%$ estimated confidence
+  interval. $1\,000$ points were then sampled from the fit normal
+  distribution.
+
+  
+\item[2. density estimation]
+  A density was estimated from the $1\,000$ points using kernel
+  density estimation with normal kernels.
+
+  
+\item[3. modeling resistant population]
+  Based on the shape fo the resultant density estimation, a resistant population of cell lines, for each compound, were
+  identified in an automated fashion. Briefly, a strong prior that the
+  majority of cell lines would be resistant was a major assumption
+  that went into this; the method attempted to find bimodal structure
+  consisting of a mixture of normal distributions; it then assigned
+  the node with the higher$\text{IC}_{50}$ as the resistant
+  population. 
+
+  
+\item[4. calling threshold based on cumulative distribution function]
+  Finally, using an empirical cumulative distribution on the estimated
+  sensitive population so as to include most of these, a threshold was
+  called.   
 \end{description}
 
 
 
+\subsection{Genomic Information}
+
+Broadly, three different molecular assays were performed on each
+cell-line-derived sample. 
+
+\subsubsection{Raw Genomic Information}
+
+\begin{description}
+\item[exome sequencing]
+  A 64-gene panel was sequenced using capillary (Sanger\reg)
+  sequencing.
+
+  
+\item[copy-number array]
+  Affymetrix\reg SNP6.0\tm microarrays were used to assess copy
+  number. 
+
+  
+\item[expression array]
+  Affymetrix\reg HT-U133A\reg microarrays were used to gather gene
+  expression information based on RNA transcript abundance-based
+  annealing to predefined probes.  
+\end{description}
 
 
+\subsubsection{Resulting Datatypes and Processing Details}
 
+\begin{description}
+\item[variants]
+  Variants were called within
+  the 64-gene panel as compared to reference. As matched normals were
+  not obtained, variants were a mixture of both somatic mutations and
+  germline variants, likely dominated by somatic mutations.
+\item[copy number]
+  Copy number information was assessed from the copy-number array
+  using Affymetrix\reg processing tools.
 
+  
+\item[gene expression]
+  Array-based expression estimates were obtained for the $14,500$
+  genes available on the platform panel.
 
+  
+\item[gene fusions]
+  Fusions were called based on the Sanger\reg sequencing. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+\end{description}
 
 
 
