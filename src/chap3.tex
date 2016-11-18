@@ -50,7 +50,7 @@ One mechanism whereby fusion genes may have impact on tumor tissue is
 via the induced expressional deregulation (ED) of the constituents. In particular, a sequence may be placed under the control of regulatory regions that were not originally meant for a sequence, resulting in, for example, the constitutive expression of a growth-factor related protein domain \todo{citation for deregulation}, leading to oncogenesis or tumor progression. 
 
 
-\section{Existing Impact-Assessment Strategies}
+\section{Existing impact-assessment strategies}
 \subsection{Detection}
 Typically, fusions are detected from RNA-sequencing (RNA-seq) reads,
 which are produced due to its relatively low cost compared to whole
@@ -68,13 +68,13 @@ Thus, candidate FJs must be filtered aggressively by heuristics based on knowled
 
 FJ identification is also a very computationally-intensive process, as every read must be split in a number of ways and positions and matched against all possible regions of the genome through alignment during CR-finding steps. One of the reasons for this is that existing fusion discovery methods use computationally intensive first-generation alignment algorithms. 
 
-\subsection{Expression Quantification}
+\subsection{Expression quantification}
 
 As ED is a major mechanism by which fusion genes impact tumors and patients, assessing whether an individual fusion detected has also led to ED is a goal for prioritizing fusions for per-patient impact and for further mechanistic study.
 
 Unfortunately, there is no currently established method of doing so in a high-throughput, unbiased fashion. Three methods currently exist:
 
-\subsubsection{Constituent Gene Summing}
+\subsubsection{Constituent gene summing}
 
 One approach to assessing whether a fusion gene or transcript is expressionally deregulated is by summing the expression estimates of its constituent transcripts. If the sum of these expression estimates substantially deviates from the same quantity in sample(s) without the fusion, it is concluded that the fusion has led to ED.
 
@@ -89,17 +89,17 @@ However, this is inaccurate due to details involving how much of each constituen
 \end{center}
 
 
-\subsubsection{Per-Exon Inspection}
+\subsubsection{Per-exon inspection}
 
 A related but distinct method of assessing fusion genes is comparison between fusion-present and fusion-absent samples by visually inspecting the per-exon expression of the constituent transcripts. While not susceptible to the problems of the summing method in terms of misestimation, this is even more labor-intensive as it is completely not automated.
 
-\subsubsection{Counting Junction-Spanning Reads}
+\subsubsection{Counting junction-spanning reads}
 
 One automated approach to assessing fusion expression estimation is by counting the number of reads supporting the fusion junction. In particular, a read can \textit{support} a fusion junction by being a \textit{spanning read} (PR) or \textit{split read} (LR). A PR is a paired-end read wherein one end maps to one transcript and another maps to a genomically distal genomic region, whereas an LR is a read wherein a portions of one read (if applicable) map to at least two distinct genomic regions.
 
 Some method of counting these reads is a common method of prioritizing fusions; however, this is very susceptible to multi-mapping reads. In particular, if a junction region is repeated in another section of the genome, reads could spuriously seem to strongly support a fusion, whereas in reality the reads were produced by different regions altogether. Thus, this method can be inaccurate. One could imagine further difficult-to-set parameters describing heuristics for filtering these reads\cite{mcpherson_defuse:_2011}, but this is a complicated and error-prone process in and of itself.
 
-\subsubsection{Problems with All Existing Methods of Fusion Expression Quantification}
+\subsubsection{Problems with all existing methods of fusion expression quantification}
 
 With all of the above method, a fusions' expression is not directly comparable to the expression of other genes or transcripts. In particular, fusions' expression is not comparable to wild-type constituents' expression, which would be helpful in order to support functional activity of a fusion for prioritization and also for the existence of the fusion. Furthermore, none of the above methods are isoform-specific; all of these merely assess the expression of the fusion gene as a whole, even though isoform-specific expression has found to be impactful in cancer\cite{christofk_m2_2008}\cite{hovanes_-cateninsensitive_2001}\cite{_insulin_2003}.
 

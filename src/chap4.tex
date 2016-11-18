@@ -1,4 +1,4 @@
-\chapter{Integrating Genomics Data for Prediction, with application to gliomas}
+\chapter{Integrating genomics data for prediction, with application to gliomas}
 
 \section{Background}
 
@@ -10,7 +10,7 @@ primary therapy. Confounding this decision is the recent finding by Johnson et a
 However, it is possible that high-throughput (HT) genomic data might be able to assist in this treatment decision-making problem via predictions. Empirically, several survival time-related HT features have been identified by TCGA; since some of these patients have been treated with TMZ, it’s possible that said molecular features might inform recurrence grade decisions for these patients as well, since recurrence grade is associated statistically with survival time. 
 Molecularly (theoretically), the mechanism behind TMZ-induced greater recurrence is partially known.
 
-\subsection{Candidate Molecular Mechanism}
+\subsection{Candidate molecular mechanism}
 In particular, TMZ induces cytotoxicity by inducing nuclear genomic mutations, which then cause cells to induce apoptosis. In particular, TMZ adds a methyl group to (methylates) guanine bases in the genome, creating an adduct. The adducts lead to recognition during replication by MMR genes, which recognizes the resulting mismatches but then repeatedly attempts to repair the region ineffectively by reinsertion of the incorrect base, leading to genomic double-strand breaks and apoptosis. 
 
 This apoptosis of quickly replicating tumor cells is the desired effect of TMZ. However, there are several reasons why this might not occur, due to other potentially extant yet testable genomic changes.
@@ -18,7 +18,7 @@ This apoptosis of quickly replicating tumor cells is the desired effect of TMZ. 
 Firstly, if apoptotic cell cycle checkpoint machinery is not functioning normally, this leads to consequently genomic instability and large-scale structural rearrangements.  Secondly, TMZ-created adducts are removed by MGMT if available and functional. However, if MGMT has a promoter region that is itself methylated, this leads to decreased MGMT expression and persistence of the TMZ-added methylation adducts beyond that which is normal, leading to increasing numbers of mutations possibly beyond even wild-type MMR machinery’s ability to detect and control. 
 These two potential issues with TMZ-related apoptosis are thought to be related to the hypermutation phenotype (quantified by much higher mutations per base rates than other tumors), which is correlated with the recurrence as high-grade. Evidence for this is based on TMZ-related mutational patterns having been observed in tumors with hypermutation phenotypes, and the existence of these patterns in regions relating to the above machinery.
 
-\section{Problem Formulation}
+\section{Problem formulation}
 
 Underlying this prediction problem in abstraction is a prediction problem: in particular, given high-dimensional clinical and molecular data, can one predict, for a particular patient, whether TMZ-induced hypermutation will occur?
 
@@ -31,7 +31,7 @@ association. However, this may still lead to an overall reduction in the expecte
 
 One of the model assumptions that we make is linearity (specifically, that $f$ uses first-order linear terms to manipulate $\vec{x}$ for performing predictions of $y$, which is a common assumption. This is implemented by linear dimensionality reduction techniques – specifically, the factor association analysis (FAA) method.
 
-\subsection{Heterogeneity Challenge}
+\subsection{Heterogeneity challenge}
 
 A fundamental challenge with this prediction problem is the heterogeneity of data types involved the prediction problem. In particular, there is molecular data which may include germline variants of various forms detected by various different exome sequencing pipelines, gnomic copy number data based on arrays and/or DNA-sequencing, expression detected by a RNA-seq and/or microarray platforms, methylation detected by microarrays and/or sequencing-based techniques, and uni-dimensional clinical covariates. 
 
@@ -39,7 +39,7 @@ A fundamental challenge with this prediction problem is the heterogeneity of dat
 In particular, this will manifest as different underlying distributions that best approximate of each data type, both between patients within a specific modality (due to heterogeneity of platforms) and between modalities within a specific patient.
 
 
-\subsubsection{Unsupervised Solutions}
+\subsubsection{Unsupervised solutions}
 
 Unsupervised machine learning approaches, which seek to more clearly represent variances in a dataset without any explicit inclusion of specific outcomes of interest, have been used to assess multi-platform genomic data.
 
@@ -60,7 +60,7 @@ One limitation of all unsupervised approaches is the necessity of the outcome of
 
 
 
-\subsubsection{Supervised Solutions}
+\subsubsection{Supervised solutions}
 
 Many supervised approaches merely add features from multiple platforms without specific inclusion of special related assumptions into the model.
 
@@ -81,23 +81,23 @@ This is less appropriate for linear models. Thus, a few linear supervised machin
 \end{description}
 
 
-\subsection{Dimensionality Challenge}
+\subsection{Dimensionality challenge}
 A perhaps bigger fundamental challenge with this prediction problem is what’s referred to as “the curse of high-dimensionality,” that is to say, there are many more covariates/predictors ($\text{number of predictors} \coloneqq p $) than observations ($N$) (i.e., $p \gg N$).  This is inherent to this problem due to the wildly high-dimensionality of the molecular datasets, which at their current maximum for even a single modality is about $500\,000$ with reasonable granularity, but could theoretically be on the order of $10^9$. This is manifests as an issue by leading to overfitting or equivalently, high variance in estimators of associations.
 
 Fortunately, these problems are not unique to this particular prediction problem, and consequently, several techniques have been developed to deal with both of these fundamental challenges. 
 
-\subsubsection{Subset Selection Approaches}
+\subsubsection{Subset selection approaches}
 
 Subset selection involves using only a subset of available features, which must be selected. There are several methods for doing so in order to address the exponential number of possible subsets, including forward and backwards stepwise regression, which iteratively adds or removes predictors based on relationship to the outcome. However, these methods suffer from relatively high prediction error due to the high variance imposed by the discrete inclusion or exclusion of a specific parameter \todo{cite elements of statistical learning}. 
 
-\subsubsection{Shrinkage Approaches}
+\subsubsection{Shrinkage approaches}
 
 A standard method of addressing high-dimensionality and related high variance of any estimated fit parameters that stymie attempts to generalize is by adding a model term that explicitly adds a penalization on the use of each parameter. An optimization is then performed over this adjusted function. Relatedly, a constraint can be placed on the size of the features and solutions within a particular constraint can be sought. Parameters involving the degree of regularization are selected based on a \textit{model selection} step, which typically attempts to assess the expected prediction error of a model with several different parameter settings in order to identify the most accurate combination. 
 
 The specific penalty that is applied to each feature may be \textit{Lasso}, which is uses the $L1$-norm of the vector of coefficients: $\sum_{j=1}^p | \beta_j | \leq t$, where $\beta_j$ is each coefficient on the $p$ parameters, and $t$ is a pre-specified constant. Another common approach is \textit{Ridge}, which uses the $L2$-norm of the coefficient vector:  $\sum_{j=1}^p  \beta_j^2  \leq t$. These have different properties, with Lasso generally leading to more sparsity. However, this may be an incorrect assumption that hurts generalizability; to address this, \textit{Elastic Net} regression was created, which involves a hyper-parameter that is specified to address the relative contribution of ridge and lasso constraints. 
 
 
-\subsubsection{Dimensionality-Reduction Approaches}
+\subsubsection{Dimensionality-reduction approaches}
 
 Dimensionality-reduction approaches offer a natural method of dealing with large numbers of correlated features -- modeling the high dimensionality of these features by a small number of independent features, and using these as new prediction features. Approaches such as \textit{principal components regression} and \textit{partial least squares} achieve this.
 
@@ -105,8 +105,8 @@ However, existing dimensionality reduction techniques typically do not also dire
 
 
 
-\section{Developed Method}
-\subsubsection{Inspiration from Unsupervised Dimensionality Reduction Models}
+\section{Developed method}
+\subsubsection{Inspiration from unsupervised dimensionality reduction models}
 
 This method’s development came about due to the observation by Novembre and Stephens\cite{novembre_interpreting_2008} that when taking the principal component analysis (PCA) of the single nucleotide variants present in individuals, the first few components correlated highly with geographic location of the individual. Briefly, PCA finds a ranked list whose entries consist of linear combinations of variables that explain decreasing components of the variance in a given matrix; in this case, that matrix $\mathbf{V}$ $(\text{people } \times \text{genomic\ variants})$.
 
@@ -138,7 +138,7 @@ This successful application of HFAM in geographic explanation of gene expression
 Thus came the inspiration for applying it to the prediction problem related to severity of recurrence upon application of TMZ given several HT genomic datatypes.
 
 
-\subsubsection{Formal Model Specification}
+\subsubsection{Formal model specification}
 In more concrete terms, the proposed HFAM consists of a latent factor model with $n_z > 1$ latent multidimensional variables $\z_1,... \z_{n_z}$ and $n_x >1$ observed variables $\x_1, ..., x_{n_x}$.
 
 $\z_1$ is taken to be generated by a normal prior wtih identity variance: $\z_1 \sim N(\0, \mathbf{I})$
@@ -160,7 +160,7 @@ Inference is done using the expectation-maximization algorithm in order to estim
 
 After learning parameters $\bTheta$, one can predict $y$ from input observed variables. See the appendix for details.
 
-\subsubsection{Consistency of Model Structure and Genomics Assumptions}
+\subsubsection{Consistency of model structure and genomics assumptions}
 
 The above model specification if used with one multifurcating second-level latent variable and one high-level latent variable of relatively low dimension induces model assumptions we feel are consistent with reasonable assumptions for the datatype, and simultaneously address the challenges of heterogeneity and high-dimensionality. In particular, dimensionality is addressed through the use of relatively low-dimensional latent variables $z_i$ -- on the order of $10^0$ in our simulations.
 
@@ -182,7 +182,7 @@ We present the results on three different datasets of increasing difficulty: (1)
 
 Machine learning assessment is a rich field, with many options available.
 
-\subsubsection{Expected Prediction Error Motivation}
+\subsubsection{Expected prediction error motivation}
 
 Essentially, one important metric to measure is \texit{expected prediction error}, which describes the expected accuracy of a given fit model on predicting from data arising from the same distribution under which it was trained \cite{friedman_elements_2001}.
 
@@ -199,13 +199,13 @@ In particular, for our model, we chose the dimension of $z_1$ to be $2$ and $z_2
 Practically, we assessed the below performance by interfacing with \texttt{scikit-learn}\cite{pedregosa_scikit-learn:_2011}, a package with built-in assessment tools, and also used existing machine learning models in this package for comparison. 
 
 
-\subsubsection{AUC Metric}
+\subsubsection{AUC metric}
 For a given set of predictions on data, one can assess accuracy based on the \textit{area under the [receiver-operating characteristic (ROC)] curve (AUC)}, a common measure of classifier efficacy\cite{friedman_elements_2001}. Briefly, the ROC curve's axes specify the particular specificity achievable for a given setting of sensitivity. An AUC of $1$ indicates perfect classification, whereas $0.5$ indicates a classifier that is no better than chance.
 
-\subsubsection{Confusion Matrix}
+\subsubsection{Confusion matrix}
 In order to complement the ROC curve and AUC, we also studied \textit{confusion matrices} based on cross-validation predictions, which show, for a given fixed sensitivity/specificity, the number of true positives, false positives, false negatives, and true negatives.
 
-\subsection{Simulated Data}
+\subsection{Simulated data} 
 
 We sought to validate that the model was performing as expected, and also to assess the necessary effect size for a given setting of $N$ and $p$. Effect size was approximated through the setting of a specific parameter of element-wise average $\mathbf{e} \coloneqq \frac{\W}{\bpsi}$ for parameter generation, where a larger setting of this quantity indicated higher signal-to-noise ratio and effect size. In essence, this means that the latent variables of the model explain more about the association between the datatypes than the noise specific to each datatype.
 
@@ -246,8 +246,33 @@ Secondly, we attempted to assess the model performance on  $N = 30$, $p = 500\,0
 
 \subsection{Cancer Genome Project}
 
+First, we assessed the efficacy of the model using both expression and mutation information.
+
+Expression information was used in the form of $z-scores$, derived as described earlier. Mutation information was used on a genic level, where any mutation occurring anywhere within a gene body resulted in a binary $1$ for that gene in that sample.
+
+As this was the gene level, there were roughly $26\,000$ features per mutation type.
+
+Missing information for a gene was imputed based on average for that gene across all samples for which information for that gene was present. 
+
+Logistic regression performed poorly on this dataset, achieving an AUC of $0.5$, which was indistinguishable from chance.
+
+HFAM performed \todo{so how'd it do after I fixed the issues.}
 
 
 
+\subsection{Glioma prediction}
+
+Here, we used sequencing data collected post-second surgery to see if we could assess hypermutation as having already occurred (versus prediction of future hypermutation), as preliminary attempts to predict outcome from first-surgery tissue were unpromising.
+
+We chose to use methylation and mutation information, as these datatypes were available for the highest number of samples.
+
+We chose the $50\,000$ most variable methylation probes, pursuant to suggestions from Dr. Matthew Grimmer as to the most cogent way to reduce methylation dimensionality. In particular, this was deemed superior to binning based on specific regions, as related glioma methylation changes often occur on a single-point basis, rather than on a large scale basis.
+
+\todo{so how did this turn out}.
 
 
+\section{Discussion}
+
+This approach shows promise; we feel that further refinement of the approach could yield to more accurate prediction than what is shown above. In particular, we would like to implement a model tuning phase above in order to assess dimensions; we would like to use the model to integrate more than two feature types -- a relatively simple addition on what is currently implemented. We would like to use different distributions for our observed datatypes that work more cogently with mutation information -- chiefly, the multinomial distribution.
+
+We would like to assess the model versus existing non-probabilistic methods for heterogeneous, regularized supervised prediction as well, such as collaborative regression. 

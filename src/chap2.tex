@@ -1,4 +1,4 @@
-\chapter{Properties of Analyzed Data}
+\chapter{Properties of analyzed data}
 
 Data from several sources were analyzed for the purposes of
 identifying impactful sequencing-accessible changes. In particular,
@@ -12,7 +12,7 @@ Data from TCGA LGG were used to assess the fusion transcript
 expression estimation tool described in chapter 3. $289$ tumors were
 analyzed by the TCGA LGG Analysis Working Group (AWG).
 
-\subsection{Raw Molecular Information}
+\subsection{Raw molecular information}
 
 \subsubsection{RNA-sequencing}
 RNA-sequencing protocol was standardized across TCGA data collection
@@ -45,7 +45,7 @@ produced with Illumina\reg HiSeq\tm, producing $5.2 \times$ average
 coverage. $39.5$ average Phred quality score was achieved, with a
 $96.5\%$ average mapping rate.
 
-\subsection{Clinical Information}
+\subsection{Clinical information}
 
 In order assess the impact of sequencing data relative to various
 outcomes and to also correlate various molecular features with known
@@ -178,7 +178,7 @@ the following pipeline:
 \item Median-centering across samples
 \end{enumerate}
 
-\section{UCSF Department of Neurosurgery (Costello Lab) Samples}
+\section{UCSF Department of Neurosurgery glioma samples}
 
 Roughly one hundred samples ($86$ at time of writing) were collected by the UCSF department of
 neurosurgery and analysed further by the Costello lab. Roughly fifty
@@ -186,7 +186,7 @@ neurosurgery and analysed further by the Costello lab. Roughly fifty
 chapter $4$, based on arising from patients with adjuvant Temozolomide
 chemotherapy. 
 
-\subsection{Raw Molecular Information}
+\subsection{Raw molecular information}
 \subsubsection{Matched normal samples} \label{matched_normal}
 For roughly $40$ of the patients, samples from circulating blood were
 taken and sequenced via a targeted exome sequencing platform with
@@ -231,14 +231,14 @@ is particularly relevant for glioma metabolic assessment.
 \end{description}
 
 
-\subsubsection{Secondary Tumor Samples}
+\subsubsection{Secondary tumor samples}
 
 Tumor samples were collected from secondary and following surgeries if
 available; the same datatypes were available as was available on
 primary tumor samples.
 
 \subsection{Resulting datatypes and processing details}
-\subsubsection{Germline Variants}
+\subsubsection{Germline variants}
 Germline variants were assessed from exome sequencing of the normal
 tumor blood samples and processed via the GATK Unified genotype
 \todo{cite GATK}. Briefly, this method works by aligning reads and
@@ -268,7 +268,7 @@ This results in segments of floating point-numer representing copy
 number, averaged across cells in a sample. To further process, we took
 floating point numbers more than $0.5$ away from $2$.
 
-\subsubsection{Somatic Mutations}
+\subsubsection{Somatic mutations}
 
 Somatic mutations were called based on combining normal and tumor
 exome-sequencing information, using GATK \todo{cite}. This results
@@ -285,7 +285,7 @@ RNA-seq data was analyzed via a pipeline using
 Kallisto\cite{bray_near-optimal_2016} to generate expresion
 estimates. 
 
-\subsection{Clinical Information}
+\subsection{Clinical information}
 
 A wealth of clinical information is available on the patients. This
 was used to select an appropriate molecular phenotype that accorded
@@ -321,7 +321,7 @@ Trust Sanger Institute to assess the sensitivity of various cancer
 types (\ref{cgp_types}) to existing pharmaceutical therapies.
 
 
-\subsection{Cancer Types}
+\subsection{Cancer types}
 
 At least one cell line each of from $29$ cancer types were used (\ref{cgp_types}).
 resulting in $1,001$ different samples. 
@@ -365,9 +365,9 @@ Uterine Corpus Endometrial Carcinoma\\ \hline
 \caption{Cancer Genome Project Tumor Types for Derived Cell Lines} \label{cgp_types}
 \end{table}
 
-\subsection{Compounds Information}
+\subsection{Compounds information}
 
-\subsubsection{Raw Compound Details}
+\subsubsection{Raw compound details}
 
 A total of 265 compounds were tested, consisting both of drugs under
 investigation and established therapeutics. The compounds can be
@@ -410,7 +410,7 @@ categories, both of which are the only cytotoxic classes tested; the
 rationale for this was that these might be more similar to the
 phenotype of interest in UCSF datasets.
 
-\subsubsection{Resulting Sensitivity Estimates}
+\subsubsection{Resulting sensitivity estimates}
 
 For each combination of compound and cell line, a call of
 \texttt{resistant} or \texttt{sensitive} was made based on the
@@ -451,12 +451,12 @@ each compound:
 
 
 
-\subsection{Genomic Information}
+\subsection{Genomic information}
 
 Broadly, three different molecular assays were performed on each
 cell-line-derived sample. 
 
-\subsubsection{Raw Genomic Information}
+\subsubsection{Raw genomic information}
 
 \begin{description}
 \item[exome sequencing]
@@ -476,7 +476,7 @@ cell-line-derived sample.
 \end{description}
 
 
-\subsubsection{Resulting Datatypes and Processing Details}
+\subsubsection{Resulting datatypes and processing details}
 
 \begin{description}
 \item[variants]
