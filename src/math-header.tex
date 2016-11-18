@@ -1,0 +1,66 @@
+\newcommand{\0}{\mathbf{0}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\vmu}{\vec{\mu}}
+\newcommand{\vu}{\vec{u}}
+\newcommand{\ub}{\vec{\bar{u}}}
+\newcommand{\x}{\vec{x}}
+\newcommand{\y}{\vec{y}}
+\newcommand{\z}{\vec{z}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\A}{\bold{A}}
+\newcommand{\B}{\bold{B}}
+\newcommand{\M}{\bold{M}}
+\newcommand{\W}{\bold{W}}
+\newcommand{\V}{\bold{V}}
+\newcommand{\D}{\bold{D}}
+\newcommand{\U}{\bold{U}}
+\newcommand{\Y}{\bold{Y}}
+\newcommand{\X}{\bold{X}}
+\newcommand{\Z}{\bold{Z}}
+\newcommand{\I}{\bold{I}}
+\newcommand{\bpsi}{\bold{\Psi}}
+\newcommand{\bLambda}{\bold{\Lambda}}
+\newcommand{\bTheta}{\bold{\Theta}}
+\newcommand{\bSigma}{\bold{\Sigma}}
+\newcommand{\train}[1]{#1^{\text{train}}}
+\newcommand{\test}[1]{#1^{\text{test}}}
+\newcommand{\ipt}[1]{#1_{\text{independent}}}
+\newcommand{\dep}[1]{#1_{\text{dependent}}}
+\newcommand{\one}[1]{#1^{(1)}}
+\newcommand{\two}[1]{#1^{(2)}}
+\newcommand{\zero}[1]{#1^{(0)}}
+\newcommand{\ww}[1]{#1^{(w)}}
+\newcommand{\inreala}[2]{\in \mathbb{R}^{#1 \times #2}}
+\newcommand{\inbina}[2]{\in \{0,1\}^{#1 \times #2}}
+\newcommand{\var}{\mathrm{Var}}
+\newcommand{\cov}{\mathrm{Cov}}
+\newcommand{\corr}{\mathrm{Corr}}
+\newcommand{\ev}{\mathbb{E}}
+% Linear Algebra: Column vector
+% usage: \colvec{number of elements}{first element}{second element}...{last element}
+\newcount\colveccount
+\newcommand*\colvec[1]{
+  \global\colveccount#1
+  \begin{pmatrix}
+    \colvecnext
+}
+\def\colvecnext#1{
+  #1
+  \global\advance\colveccount-1
+  \ifnum\colveccount>0
+  \\
+  \expandafter\colvecnext
+  \else
+  \end{pmatrix}
+  \fi
+}
+
+% overset text
+\newcommand{\overword}[1]{\overset{\mathrm{#1}}}
+
+% independence symbol
+\newcommand\indep{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+% more text colors: see http://en.wikibooks.org/wiki/LaTeX/Colors
+\usepackage[usenames,dvipsnames]{xcolor}
+
