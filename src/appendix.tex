@@ -404,70 +404,70 @@ One possible solution is to break half of the diagonal variance into
 $\wwarm$ and half into $\psiwarm$, and keep all the non-diagonal variance
 in $\psiwarm$:
 
+Now, we take:
 
 
 
 
-Now, we take
 
-% \newcommand{\wexpandwarm}{ \frac{1}{\sqrt{2}} \left( \begin{array}{c|c} \sqrt{ \text{diag}(\A) } & \bold{0}  \end{array} \right)}
+\newcommand{\wexpandwarm}{ \frac{1}{\sqrt{2}} \left( \begin{array}{c|c} \sqrt{ \text{diag}(\A) } & \bold{0}  \end{array} \right)}
 
-% \newcommand{\psiexpwarm}{ \text{non-diag}(\A) + \frac{1}{2} \text{diag}(\A)}
-
+\newcommand{\psiexpwarm}{ \text{non-diag}(\A) + \frac{1}{2} \text{diag}(\A)}
 
 
 
-% \begin{align}
-%   \Aboxed{ \psiwarm &\leftarrow \psiexpwarm }\\
-%   \Aboxed{\wwarm &\leftarrow \wexpandwarm  \label{zeroline}}
-% \end{align}
-% , where $\0$ on line \ref{zeroline} is $p_3 \times m - p_3$.
+
+\begin{align}
+  \Aboxed{ \psiwarm &\leftarrow \psiexpwarm }\\
+  \Aboxed{\wwarm &\leftarrow \wexpandwarm  \label{zeroline}}
+\end{align}
+, where $\0$ on line \ref{zeroline} is $p_3 \times m - p_3$.
 
 
-% \subsection{Proof} all variance is recovered by this scheme:
+\subsection{Proof} all variance is recovered by this scheme:
 
-% \begin{align}
-%   \var(\x_3) &= \W_3 \W_3^T + \bpsi_3  \text{ by (\ref{decomp})} \\
-%              &= \wwarm \wwarm^T + \psiwarm \\
-%   &=\wexpandwarm \wexpandwarm^T + \psiexpwarm \\
-% &=  \frac{1}{2} \left( \begin{array}{c|c}  \text{diag}(\A)
-%     ^{\frac{1}{2}} & \bold{0}  \end{array} \right) \left( \begin{array}{c}  \text{diag}(\A)
-%     ^{\frac{1}{2}}\\  \bold{0}  \end{array} \right) +
-%   \psiexpwarm \\
-%              &= \frac{1}{2} \text{diag}(\A) + \psiexpwarm \\
-%              &= \text{diag}(\A) + \text{non-diag}(\A) \\
-%                &= \A
-% \end{align}
+\begin{align}
+  \var(\x_3) &= \W_3 \W_3^T + \bpsi_3  \text{ by (\ref{decomp})} \\
+             &= \wwarm \wwarm^T + \psiwarm \\
+  &=\wexpandwarm \wexpandwarm^T + \psiexpwarm \\
+&=  \frac{1}{2} \left( \begin{array}{c|c}  \text{diag}(\A)
+    ^{\frac{1}{2}} & \bold{0}  \end{array} \right) \left( \begin{array}{c}  \text{diag}(\A)
+    ^{\frac{1}{2}}\\  \bold{0}  \end{array} \right) +
+  \psiexpwarm \\
+             &= \frac{1}{2} \text{diag}(\A) + \psiexpwarm \\
+             &= \text{diag}(\A) + \text{non-diag}(\A) \\
+               &= \A
+\end{align}
 
 
-% \subsection{Example}
-% $p_3 = 1, m = 2 \Rightarrow \A = \left(a_1 \right)$
+\subsection{Example}
+$p_3 = 1, m = 2 \Rightarrow \A = \left(a_1 \right)$
 
-% \begin{align}
-%   \psiwarm &\leftarrow \psiexpwarm\\
-%   &= \frac{1}{2} \left(a_1 \right)
-% \end{align}
+\begin{align}
+  \psiwarm &\leftarrow \psiexpwarm\\
+  &= \frac{1}{2} \left(a_1 \right)
+\end{align}
 
-% \begin{align}
-%   \wwarm &\leftarrow \wexpandwarm \\
-%   &= \frac{1}{\sqrt{2}}  \left( \begin{array}{cc} \sqrt{a_1}  &
-%                                                                  \0 \end{array}
-%                                                                 \right) \\ 
-% \end{align}
+\begin{align}
+  \wwarm &\leftarrow \wexpandwarm \\
+  &= \frac{1}{\sqrt{2}}  \left( \begin{array}{cc} \sqrt{a_1}  &
+                                                                 \0 \end{array}
+                                                                \right) \\ 
+\end{align}
 
-% \begin{align}
-%   \var(\x_3) &= \wwarm \wwarm^T + \psiwarm \\
-%   &= \frac{1}{2}  \left( \begin{array}{cc} \sqrt{a_1}  &
-%                                                                  \0 \end{array}
-%                                                                 \right)
-%                                                                 \left(\begin{array}{c}
-%                                                                        \sqrt{a_1}
-%                                                                        \\
-%                                                                        \0 \end{array} \right)
-%   + \frac{1}{2} \left( a_1 \right) \\
-%   &= a_1 \\
-% &= \A
-% \end{align}
+\begin{align}
+  \var(\x_3) &= \wwarm \wwarm^T + \psiwarm \\
+  &= \frac{1}{2}  \left( \begin{array}{cc} \sqrt{a_1}  &
+                                                                 \0 \end{array}
+                                                                \right)
+                                                                \left(\begin{array}{c}
+                                                                       \sqrt{a_1}
+                                                                       \\
+                                                                       \0 \end{array} \right)
+  + \frac{1}{2} \left( a_1 \right) \\
+  &= a_1 \\
+&= \A
+\end{align}
 
 
 
