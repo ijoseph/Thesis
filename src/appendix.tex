@@ -24,7 +24,7 @@
 \end{align*}
 
 
-\section{Complete Log-Likelihood}
+\section{Complete log-likelihood}
 For $N$ samples, 
 \begin{equation}
 \begin{split}
@@ -77,7 +77,7 @@ For $N$ samples,
 \end{split}
 \end{equation}
 \pagebreak
-\section{M-Step: Finding Critical Points}
+\section{M-Step: finding critical points}
 \subsection{$\W$}
 
 % W_0
@@ -180,7 +180,7 @@ update.
   \left(\hat{\bpsi}_{i, \text{MLE}} \right)
 \end{align}
 \pagebreak
-\section{E-Step: Finding Posterior Conditional Distribution}
+\section{E-Step: finding posterior conditional distribution}
 
 
 \newcommand{\zonezone}{\W_3^T \bpsi_3^{-1}\W_3 + \W_0^T\bpsi_0^{-1}\W_0+\I}
@@ -224,7 +224,7 @@ By inspection,
 \end{align}
 
 
-\subsection{Working with Precision Matrix}
+\subsection{Working with precision matrix}
 
 % define bLambdas
 \newcommand{\lambdazz}{\begin{pmatrix} \zonezone & \zoneztwo \\
@@ -285,8 +285,8 @@ Now we have what we need for the E-step:
 
 
 \pagebreak % fail
-\section{Finding Conditional Distribution of Outcome Observed Variable
-  Given Input Observed Variables}
+\section{Finding conditional distribution of outcome observed variable
+  given input observed variables}
 For the purposes of classification, we observe $\x_1$ and $\x_2$ and
 would like to predict $\x_3$ based on parameters learned during
 fitting on training data $\hat{\bTheta} \coloneqq \left\{ \{\hat{W}_k\}_{k=0}^3 ,
@@ -374,8 +374,8 @@ complete joint probability based on model dependency structures.
 
 \pagebreak
 
-\section{Finding $\bTheta$ for Warm Starts where Child Node is of
-  Lower Dimension than Parent}
+\section{Finding $\bTheta$ for warm starts where child node is of
+  lower dimension than parent}
 
 This ignores all variance contributed to a node by its grandparents. \\
 

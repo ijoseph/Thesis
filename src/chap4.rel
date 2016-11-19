@@ -1,0 +1,40 @@
+;; RefTeX parse info file
+;; File: /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap4.tex
+;; User: ijoseph (Isaac C. Joseph)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags)
+
+(is-multi nil)
+
+(bibview-cache ("pedregosa_scikit-learn:_2011" . "Pedregosa etal. Scik. Learn: {{Mach. Learn. {{Pyth., 12:2825−2830") ("friedman_elements_2001" . "Friedman etal. Elements Statistical Learning, 1") ("ledford_end_2015" . "Ledford End Cancer Genome Project Prompts, 517:128") ("ng_paradigm-shift_2012" . "Ng etal. {{PAR. {{SH. Pred. Funct. Mutat., 28:i640") ("vaske_inference_2010" . "Vaske etal. Infer. Pati. Spec. Pathw. Activ., 26:i237") ("shen_integrative_2009" . "Shen etal. Integr. Clust. Mult. Genom. Data, 25:2906") ("shen_integrative_2012" . "Shen etal. Integr. {{Subtype Disc. {{Gl. Using, 7:e35236") ("yuan_assessing_2014" . "Yuan etal. Assess. Clin. Util. Canc. Genom., 32:644") ("witten_extensions_2009" . "Witten & Tibshirani Extens. {{Sp. Canon. Corr. Analys., 8:1") ("gross_collaborative_2015" . "Gross & Tibshirani Collaborative Regression, 16:326") ("tipping_probabilistic_1999" . "Tipping & Bishop Prob. {{Pr. Comp. Analys., 61:611") ("novembre_interpreting_2008" . "Novembre & Stephens Interpr. Princ. Comp. Analys. Spat., 40:646"))
+
+(master-dir . "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/")
+
+(label-numbers)
+
+(bof "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap4.tex")
+
+(toc "toc" "  1 Integrating Genomics Data for Prediction, with application to gliomas" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap4.tex" nil 1 "1" "\\chapter{Integrating Genomics Data for Prediction, with application to gliomas}" 1)
+
+(toc "toc" "    1.1 Background" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap4.tex" nil 2 "1.1" "\\section{Background}" 82)
+
+(toc "toc" "      1.1.1 Candidate Molecular Mechanism" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap4.tex" nil 3 "1.1.1" "\\subsection{Candidate Molecular Mechanism}" 1341)
+
+(toc "toc" "    1.2 Problem Formulation" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap4.tex" nil 2 "1.2" "\\section{Problem Formulation}" 3087)
+
+(toc "toc" "      1.2.1 Heterogeneity" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap4.tex" nil 3 "1.2.1" "\\subsection{Heterogeneity}" 3350)
+
+(toc "toc" "      1.2.2 Dimensionality" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap4.tex" nil 3 "1.2.2" "\\subsection{Dimensionality}" 3350)
+
+(toc "toc" "      1.2.3 Statistical Machine Learning Interpretation" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap4.tex" nil 3 "1.2.3" "\\subsection{Statistical Machine Learning Interpretation}" 3350)
+
+(toc "toc" "        1.2.3.1 Inspiration of Method" "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap4.tex" nil 4 "1.2.3.1" "\\subsubsection{Inspiration of Method}" 14137)
+
+(eof "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/chap4.tex")
+))
+
