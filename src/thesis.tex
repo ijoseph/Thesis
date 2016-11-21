@@ -24,6 +24,7 @@
 \usepackage{amsmath} %maths
 \usepackage{mathtools} % MATHS.
 \usepackage{blkarray}
+\usepackage[toc,page]{appendix}
 
 
 \input{math-header}
@@ -56,7 +57,7 @@
 
 \maketitle
 % Delete (or comment out) the \approvalpage line for the final version.
-% \approvalpage
+\approvalpage
 \copyrightpage
 
 \include{abstract}
@@ -108,10 +109,11 @@ fighting for in this world.
 \include{chap2}
 \include{chap3}
 \include{chap4}
-\include{appendix}
-
-
 
 \printbibliography
+\begin{appendices}
+  \include{appendix}
+\end{appendices}
+
 
 \end{document}
