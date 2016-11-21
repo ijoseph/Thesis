@@ -23,7 +23,7 @@
   \W_3 &\inreala{p_3}{m} &         \bpsi_3 &\inreala{p_3}{p_3}\\  
 \end{align*}
 
-
+\begin{landscape}
 \section{Complete log-likelihood}
 For $N$ samples, 
 \begin{equation}
@@ -76,6 +76,7 @@ For $N$ samples,
 & -\frac{m}{2} \log( 2 \pi) - \frac{1}{2} \ev [ \z_{1,n}^T \z_{1,n}]
 \end{split}
 \end{equation}
+\end{landscape}
 \pagebreak
 \section{M-Step: finding critical points}
 \subsection{$\W$}
@@ -119,7 +120,8 @@ By pattern-matching,
 \Aboxed{    \hat{\W_3^T}_{\text{MLE}} &= \left( \sum_{n=1}^N \ev [ \z_{1,n} \z_{1,n}^T] \right)^{-1}
                               \left( \sum_{n=1}^N \ev [ \z_{1,n}] \x_{3,n}^T \right)}\\  
 \end{align*}
-
+\pagebreak
+\begin{landscape}
 \subsection{$\bpsi$}
 
 
@@ -127,8 +129,9 @@ By pattern-matching,
   &\frac{\partial}{\partial \bpsi_0} \ecll = \\
   & \sum_{n=1}^N \left( - \frac{\partial}{\partial \bpsi_0}  \frac{1}{2} \log \left( \left|
     \bpsi_0 \right| \right) - \frac{1}{2} \frac{\partial}{\partial
-    \bpsi_0}\Tr \left( \ev [\z_{2,n} \z_{2,n}^T] \bpsi_0^{-1} \right)  +
-    \frac{\partial}{\partial \bpsi_0} \Tr \left( \ev [\z_{1,n} \z_{2,n}^T ]
+    \bpsi_0}\Tr \left( \ev [\z_{2,n} \z_{2,n}^T] \bpsi_0^{-1} \right)
+    + \\
+    &\frac{\partial}{\partial \bpsi_0} \Tr \left( \ev [\z_{1,n} \z_{2,n}^T ]
     \bpsi_0^{-1} \W_0 \right) - \frac{1}{2} \frac{\partial}{\partial \bpsi_0} \Tr
     \left( \ev [\z_{1,n} \z_{1,n}^T] \W_0^T \bpsi_0^{-1} \W_0 \right) \right) \\
     &=\sum_{n=1}^N \left( -\frac{1}{2} \bpsi_0^{-1}  + \frac{1}{2} \bpsi_0^{-1} \ev[\z_{2,n} \z_{2,n}^T] \bpsi_0^{-1} - \bpsi_0^{-1} \ev[\z_{2,n} \z_{1,n}^T] \W_0^T
@@ -222,7 +225,8 @@ By inspection,
 \text{, where } \x \coloneqq \colvec{3}{\x_1}{\x_2}{\x_3}, \z
   \coloneqq \colvec{2}{\z_1}{\z_2} \label{x.and.z.vector.def}
 \end{align}
-
+\end{landscape}
+\pagebreak
 
 \subsection{Working with precision matrix}
 
