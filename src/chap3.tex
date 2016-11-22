@@ -47,7 +47,7 @@ information. Recently, for example, recurrent receptor tyrosine kinase
 fusions were detected in gliomas\cite{_comprehensive_2015}.
 
 One mechanism whereby fusion genes may have impact on tumor tissue is
-via the induced expressional deregulation (ED) of the constituents. In particular, a sequence may be placed under the control of regulatory regions that were not originally meant for a sequence, resulting in, for example, the constitutive expression of a growth-factor related protein domain \todo{citation for deregulation}, leading to oncogenesis or tumor progression. 
+via the induced expressional deregulation (ED) of the constituents. In particular, a sequence may be placed under the control of regulatory regions that were not originally meant for a sequence, resulting in, for example, the constitutive expression of a growth-factor related protein domain \cite{weinberg_biology_2013}, leading to oncogenesis or tumor progression. 
 
 
 \section{Existing impact-assessment strategies}
@@ -152,7 +152,7 @@ Using the modern Kallisto\cite{bray_near-optimal_2015} expression estimation mod
 
 Given the expression of all transcripts including CTFIs, one can validate the existence of a particular fusion transcript in a sample based on comparing the expression of the CTFI to the expression of its constituents. In particular, if the CTFI has high expression compared to each constituent, this can be seen as evidence for existence of the fusion transcript. However, if no CTFIs of a given FJ are expressed more than any of their constituent transcripts, this can be seen as evidence against the existence of that fusion transcript.
 
-Regardless, this method allows for the identification of expressionally-deregulated fusion transcripts, in the sense that it allows for direct identification of expressional differences. This can be achieved via comparison of the fusion transcript's expression to the expression of constituents in a panel of matched normal cells known to be lacking the relevant FJ in their DNA. One can use formal differneital expression tools to gather significance for such a test, such as Cuffdiff or DESeq \todo{cite both}.
+Regardless, this method allows for the identification of expressionally-deregulated fusion transcripts, in the sense that it allows for direct identification of expressional differences. This can be achieved via comparison of the fusion transcript's expression to the expression of constituents in a panel of matched normal cells known to be lacking the relevant FJ in their DNA. One can use formal differneital expression tools to gather significance for such a test, such as Cuffdiff\cite{trapnell_differential_2013} or DESeq\cite{anders_differential_2012}.
 
 \section{Results}
 
@@ -189,13 +189,13 @@ Finally, we validated that the expression of the fusion transcript was higher in
 
 We also compared the fusion transcripts' expression to its constituents in matched normal tissue. This allowed for further evidence of the fusions' leading to expressional deregulation.
 
-In order to make the comparison between the sample of interest and cerebral cortex samples from the Genotype-Tissue Expression project (GTEx)\cite{lonsdale_genotype-tissue_2013}, we transformed expression estimates from fragments per kilobase per million-reads-mapped (FPKM) to transcripts per million (TPM), then applied middle-50th-percentile-normalization \todo{cite what the FPKM}. We validated this normalization by using a housekeeping gene, heat-shock protein, 90-kilodaltons, alpha, class b, member 1 (HSP90AB1), for which strong evidence exists of relatively stable expresion temporally, spatially, and inter-cell-type. We saw that the expression in the sample of interest of HSP90AB1 was similar to that of the normal tissue.
+In order to make the comparison between the sample of interest and cerebral cortex samples from the Genotype-Tissue Expression project (GTEx)\cite{lonsdale_genotype-tissue_2013}, we transformed expression estimates from fragments per kilobase per million-reads-mapped (FPKM) to transcripts per million (TPM), then applied middle-50th-percentile-normalization\cite{_what_2014}. We validated this normalization by using a housekeeping gene, heat-shock protein, 90-kilodaltons, alpha, class b, member 1 (HSP90AB1), for which strong evidence exists of relatively stable expresion temporally, spatially, and inter-cell-type. We saw that the expression in the sample of interest of HSP90AB1 was similar to that of the normal tissue.
 
 We validated that the expresson of the highest-expression FGFR3-TACC3 fusion transcript isoform was much higher than that of its constituents the matched normals -- on the order of 10 to 1000 times higher.
 
 \subsubsection{EGFR-SEPT14 Fusion}
 
-We also studied a fusion between the epidermal growth factor receptor (EFGR) and septin 14 (SEPT14) genes (EGFR-SEPT14 fusion). EGFR is another RTK with similar activity to FGFR3, and was thus another candidate for a fusion having similar oncogenic properties to the FGFR3-TACC3 fusion, although unknown in its ability to expressionally deregulate. EGFR3-SEPT14 is also known to have oncogenic properties in glioblastoma, which is equivalent to grade IV glioma and related as a progression result to LGGs \todo{OMIM entry HEAT SHOCK}.
+We also studied a fusion between the epidermal growth factor receptor (EFGR) and septin 14 (SEPT14) genes (EGFR-SEPT14 fusion). EGFR is another RTK with similar activity to FGFR3, and was thus another candidate for a fusion having similar oncogenic properties to the FGFR3-TACC3 fusion, although unknown in its ability to expressionally deregulate. EGFR3-SEPT14 is also known to have oncogenic properties in glioblastoma, which is equivalent to grade IV glioma and related as a progression result to LGGs\cite{_omim_2016-1}. 
 
 Once again, we noticed that the expression of the fusion transcripts were above their constituents in many cases \todo{insert figure from supplement of NEJM}. This suggests expressional deregulation occurred for this fusion.
 
