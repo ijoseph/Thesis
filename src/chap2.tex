@@ -78,8 +78,8 @@ these were used in order to prioritize resultant FJs.
   Here, BamBam\cite{sanborn_double_2013} was used to estimate
   rearrangements based on exome-sequencing and deep whole-genome
   sequencing reads. These reads were aligned and processed using the
-  aligners of BWA \todo{cite BWA} and Picard \todo{cite}/ Broad
-  Institute Firehose \todo{cite}.
+  aligners of BWA \cite{li_fast_2009} and Picard \cite{_picard_2016} Broad
+  Institute Firehose \cite{_firehose_2016}
   
   \textbf{shallow-sequencing-based}
 
@@ -87,9 +87,9 @@ these were used in order to prioritize resultant FJs.
   shallow (``low-pass'') sequencing was also used to call DNA
   rearrangements.
 
-  For this purpose, the CASAVA \todo{cite} tool was used, along with
+  For this purpose, the CASAVA \cite{_casava_2016} tool was used, along with
   BWA for mapping and BreakDancer\cite{chen_breakdancer_2009} and
-  Meerkat \todo{cite}.
+  Meerkat\cite{yang_diverse_2013}.
 
 
 
@@ -107,7 +107,7 @@ these were used in order to prioritize resultant FJs.
   \textbf{deFuse pipeline} deFuse\cite{mcpherson_defuse:_2011} was
   used by the Haussler lab at UCSC in order to call FJs from
   RNA-sequencing data. As part of the deFuse pipeline,
-  TopHat\todo{cite} was used, along with a support vector machine
+  TopHat\cite{trapnell_tophat:_2009} was used, along with a support vector machine
   (SVM) classifier to assess the probability of fusion existence based
   on priors collected by a test set.
 
@@ -150,7 +150,7 @@ these were used in order to prioritize resultant FJs.
         \textbf{Accepted Value} \\ \hline
         exon-connecting reads & $ > 1$ \\
         spanning reads & $> 2$\\
-        \texttt{BLASTN}\todo{cite}-computed inter-constituent sequence
+        \texttt{BLASTN}\cite{altschul_basic_1990}-computed inter-constituent sequence
                                                        similarity & $
                                                                     <0.01$\\ \hline
       \end{tabular}
@@ -241,7 +241,7 @@ primary tumor samples.
 \subsubsection{Germline variants}
 Germline variants were assessed from exome sequencing of the normal
 tumor blood samples and processed via the GATK Unified genotype
-\todo{cite GATK}. Briefly, this method works by aligning reads and
+\cite{mckenna_genome_2010}. Briefly, this method works by aligning reads and
 producing variants at sites differing from an input reference, and
 results in a list of called variants for every sample on a base-pair
 resolution.
@@ -271,7 +271,7 @@ floating point numbers more than $0.5$ away from $2$.
 \subsubsection{Somatic mutations}
 
 Somatic mutations were called based on combining normal and tumor
-exome-sequencing information, using GATK \todo{cite}. This results
+exome-sequencing information, using GATK. This results
 each variant of one or more nucleotides on a base-pair resolution
 between tumor and normal sequencing information.
 

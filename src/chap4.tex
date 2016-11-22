@@ -217,20 +217,35 @@ Since we are interested in a classification problem and the model as specified g
 First, we sought to assess whether the model would lead to more accurate recovery of its simulated data than other models. We chose logistic regression with lasso penalty as a model for comparison.
 
 \begin{description}
-\item[$\mathbf{N=1,000, p=11}$] We used $N=1,000$ and $p=11$ ($n_x = 3$, with
-  two $5$-dimensional feature nodes). $N=1,000$ corresponds to the
-  approximate number of samples in the Cancer Genome
-  Project\cite{ledford_end_2015} dataset.
+\item[$\mathbf{N=1,000, p=11}$] We used $N=1,000$ and $p=11$
+  ($n_x = 3$, with two $5$-dimensional feature nodes). $N=1,000$
+  corresponds to the approximate number of samples in the Cancer
+  Genome Project\cite{ledford_end_2015} dataset.
 
   We found that the model was slightly superior from an AUC
   perspective, especially with relatively low effect size
   ($e \leftarrow 1.25$). \todo{insert figure showing this}
+
+  % \begin{center}
+  %   \begin{figure}\centering
+  %     \parbox{.9\textwidth}{\centering
+  %       \noindent \includegraphics[width=.9\textwidth]{/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch4_1_a.png}
+  %       \includegraphics[width=.9\textwidth]{/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch4_1_b.png}
+
+  %       \includegraphics[width=.9\textwidth]{/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch4_1_c.png}       
+        
+  %       \caption{HFAM AUC values for $e = 1$ (top) , $1.25$ (middle),
+  %         $10$ (bottom)}}
+  %   \end{figure}
+  % \end{center}
+
+
   
-\item[$\mathbf{N=30,p=11}$] This number of samples roughly corresponds to that
-  which is available from the Costello Lab. Here, we see a greater
-  advantage of the model in terms of AUC, especially at relatively low
-  effect-sizes. \todo{figure}
-\end{description}
+  \item[$\mathbf{N=30,p=11}$] This number of samples roughly
+    corresponds to that which is available from the Costello
+    Lab. Here, we see a greater advantage of the model in terms of
+    AUC, especially at relatively low effect-sizes. \todo{figure}
+  \end{description}
 
 \subsubsection{$\mathbf{p \gg N}$}
 
