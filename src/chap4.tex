@@ -45,7 +45,7 @@ Unsupervised machine learning approaches, which seek to more clearly represent v
 
 \begin{description}
 \item[Consensus clustering]
-  \textit{Consensus clustering} or \textit{cluster-of-cluster}\todo{cite Kristensen} methods combine datatypes by hierarchically clustering samples within each datatype, then using the specific cluster assigned per data-type as a feature for a meta-clustering approach. This is best used successfully in situations where variance is shared among multiple different genomic datatypes, \textit{and} that shared variance is mostly or largely a component of the outcome of interest.
+  \textit{Consensus clustering} or \textit{cluster-of-cluster} \cite{kristensen_principles_2014-1} methods combine datatypes by hierarchically clustering samples within each datatype, then using the specific cluster assigned per data-type as a feature for a meta-clustering approach. This is best used successfully in situations where variance is shared among multiple different genomic datatypes, \textit{and} that shared variance is mostly or largely a component of the outcome of interest.
 
 \item[factor analysis-based approaches] Approaches such as iCluster \cite{shen_integrative_2012}\cite{shen_integrative_2009} use an explicit probabilistic generative model in order to reduce dimensionality and simultaneously find shared variance among a different number of sequencing datatypes, allowing for parametric assumptions useful for sequencing data type distributions (for example, modelling mutation calls as Bernoulli random variables). This approach has not been heretofore expanded into a supervised setting.
 
@@ -74,7 +74,7 @@ This is less appropriate for linear models. Thus, a few linear supervised machin
 
 
 \item[canonical correlation analysis-based approaches]
-  Canonical correlation analysis, which is originally an unsupervised technique to find shared variance between two feature sets, has been adapted into supervised models by adding an outcome of interest. \todo{citeA novel semi-supervised canonical correlation analysis and extensions for multi-view dimensionality reduction}, \todo{cite supervised principal components paper}\cite{witten_extensions_2009}. This was used with some success by Drs. Robert Tibshirani and Samuel Gross as a predictor for diffuse B-cell lymphoma prediction of copy number. Recently, an extension was proposed: the \textit{Collaborative Regression} method\cite{gross_collaborative_2015}. This method addressed shortcomings of previous methods by formulating the problem in a way that is convex, and therefore algorithmically efficient.
+  Canonical correlation analysis, which is originally an unsupervised technique to find shared variance between two feature sets, has been adapted into supervised models by adding an outcome of interest \cite{shen_novel_2014} \cite{bair_prediction_2006}\cite{yu_supervised_2006}\cite{witten_extensions_2009}. This was used with some success by Drs. Robert Tibshirani and Samuel Gross as a predictor for diffuse B-cell lymphoma prediction of copy number. Recently, an extension was proposed: the \textit{Collaborative Regression} method\cite{gross_collaborative_2015}. This method addressed shortcomings of previous methods by formulating the problem in a way that is convex, and therefore algorithmically efficient.
 
   However, these methods were not specified probabilistically, and therefore are not as amenable to extensions involving explicit data type distribution specifications. In addition, the adaptation of CCA used above was approximate, and thereby is possibly less statistically powerful than a precise (probabilistic) specification. Furthermore, not being probabilistic, these models can not be used to generatively, preventing them using simulation to assess model performance parameters, such as requisite $N$, $p$, and effect size. 
   
@@ -88,7 +88,7 @@ Fortunately, these problems are not unique to this particular prediction problem
 
 \subsubsection{Subset selection approaches}
 
-Subset selection involves using only a subset of available features, which must be selected. There are several methods for doing so in order to address the exponential number of possible subsets, including forward and backwards stepwise regression, which iteratively adds or removes predictors based on relationship to the outcome. However, these methods suffer from relatively high prediction error due to the high variance imposed by the discrete inclusion or exclusion of a specific parameter \todo{cite elements of statistical learning}. 
+Subset selection involves using only a subset of available features, which must be selected. There are several methods for doing so in order to address the exponential number of possible subsets, including forward and backwards stepwise regression, which iteratively adds or removes predictors based on relationship to the outcome. However, these methods suffer from relatively high prediction error due to the high variance imposed by the discrete inclusion or exclusion of a specific parameter\cite{friedman_elements_2001}.
 
 \subsubsection{Shrinkage approaches}
 
