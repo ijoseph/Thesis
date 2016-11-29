@@ -251,13 +251,17 @@ First, we sought to assess whether the model would lead to more accurate recover
 
 Secondly, we sought to assess the model's performance for data with dimensions that approximated the dimensions of real genomic data.
 
+\begin{description}
+\item[$\mathbf{N = 1\,000, p = 50\,000}$] 
+
 First, we assessed its performance on $p = 50\,000$, which is similar to two datatypes' dimensions from the Cancer Genome Project.
 
 Here, we found the model slightly superior than logistic regression, and requisite $e$ to be $1.25$ for what we consider adequate prediction accuracy (AUC $\appox 0.85$). 
 
 \todo{insert figures}
-
+\item[$\mathbf{N = 30, p = 500\,000}$] 
 Secondly, we attempted to assess the model performance on  $N = 30$, $p = 500\,000$, which is similar to Costello's data size, but found performance prohibitive without further algorithmic optimization. In lieu of this, we opted to preemptively reduce dimensionality for the Costello dataset (see below).
+\end{description}
 
 \subsection{Cancer Genome Project}
 
