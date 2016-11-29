@@ -1,0 +1,24 @@
+;; RefTeX parse info file
+;; File: /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/test.tex
+;; User: ijoseph (Isaac C. Joseph)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags)
+
+(is-multi nil)
+
+(bibview-cache)
+
+(master-dir . "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/")
+
+(label-numbers)
+
+(bof "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/test.tex")
+
+(eof "/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/src/test.tex")
+))
+
