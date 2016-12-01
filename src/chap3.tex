@@ -173,19 +173,48 @@ First, we studied a patient with a fusion detected between the Fibroblast Growth
 
 This fusion was a good candidate for validation of our method as it has been identified as undergoing fusion-modulated expressional deregulation \cite{parker_tumorigenic_2013}.
 
-The mechanistic model is as follows\todo{figure from PDF at /Users/ijoseph/Documents/Work/Career/Applications/Roche-Sequencing/seminar.pdf}: the regulation of FGFR3 is based on the annealing of its 3' untranslated region (UTR) to a micro-RNA (miRNA) (miR-99a, in particular). When miR-99a anneals to the FGFR3 transcript, the transcript is marked for degradation. Thus, FGFR3's expression is downregulated based on its 3' UTR region. However, the fusion is formed such that the FGFR3 constituent lacks its 3' UTR, and therefore loses its wild-type regulatory mechanism. This leads to the temporally and spatially ectopically elevated expression of the FGFR3 sequence, leading to mitosis via mechanisms explained above.
+\begin{figure}
+  \centering \includegraphics[width=.9\textwidth]{/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch3/miRNA.pdf}
+  \caption{Model of deregulation for FGFR3-TACC3
+    fusion} \label{threeone}
+\end{figure}
+
+
+The mechanistic model is as follows: the regulation of FGFR3 is based on the annealing of its 3' untranslated region (UTR) to a micro-RNA (miRNA) (miR-99a, in particular) (see figure \ref{threeone}). When miR-99a anneals to the FGFR3 transcript, the transcript is marked for degradation. Thus, FGFR3's expression is downregulated based on its 3' UTR region. However, the fusion is formed such that the FGFR3 constituent lacks its 3' UTR, and therefore loses its wild-type regulatory mechanism. This leads to the temporally and spatially ectopically elevated expression of the FGFR3 sequence, leading to mitosis via mechanisms explained above.
 
 
 Upon applying the method using eXpress as our expresion quantification module\cite{roberts_streaming_2013} on this specific paper, we were able to validate the results.
 
-Firstly, we noted that isoforms of FGFR3-TACC3 fusion transcripts were among the highest-expressed transcripts in the transcriptome \todo{figure from page 38 of pdf}. This was a sanity check offering consistent evidence with the ectopically high expression of FGFR3-TACC3.
+\begin{figure}
+  \centering \includegraphics[width=.9\textwidth]{/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch3/all_transcripts.png}
+  \caption{Expression of all transcripts in transcriptome for
+    individual} \label{threetwo}
+\end{figure}
 
 
-Secondly, we noted that we were able to differentiate between the expression of fusion transcript isoforms. In particular, we found that one isoform's expression dominated the expression of all others \todo{figure from 39 of PDF}.
+Firstly, we noted that isoforms of FGFR3-TACC3 fusion transcripts were among the highest-expressed transcripts in the transcriptome (see figure \ref{threetwo}). This was a sanity check offering consistent evidence with the ectopically high expression of FGFR3-TACC3.
 
-Thirdly, we noted the correct assessment of the FGFR3-TACC3 fusion transcript isoform versus an FGFR3-AC016733.1 transcript, also formed based on the same FJ.
 
-Finally, we validated that the expression of the fusion transcript was higher in expression than its constituents in the same cell \todo{figure from 40 of PDF}, finding that the fusion transcript's expression was more than 3 times the expression of FGFR3 and 100 times the expresion of the TACC3 transcript.
+\begin{figure}
+  \centering \includegraphics[width=.9\textwidth]{/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch3/just_fusions.pdf}
+  \caption{Expression of fusion transcripts in the transcriptome showing isoform-resolution expression discrimination} \label{threethree}
+\end{figure}
+
+
+
+Secondly, we noted that we were able to differentiate between the expression of fusion transcript isoforms. In particular, we found that one isoform's expression dominated the expression of all others (see figure \ref{threethree})
+
+
+Thirdly, we noted the correct assessment of the FGFR3-TACC3 fusion transcript isoform versus an FGFR3-AC016733.1 transcript, also formed based on the same FJ (see figure \ref{threethree}).
+
+
+\begin{figure}
+  \centering \includegraphics[width=.9\textwidth]{/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch3/comparison.pdf}
+  \caption{Expression of fusion transcript is higher than constituents in same cell and in related normal cells}\label{threefour}
+\end{figure}
+
+
+Finally, we validated that the expression of the fusion transcript was higher in expression than its constituents in the same cell \todo{figure from 40 of PDF}, finding that the fusion transcript's expression was more than 3 times the expression of FGFR3 and 100 times the expresion of the TACC3 transcript (see figure \ref{threefour}).
 
 We also compared the fusion transcripts' expression to its constituents in matched normal tissue. This allowed for further evidence of the fusions' leading to expressional deregulation.
 
