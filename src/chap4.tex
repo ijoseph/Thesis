@@ -162,7 +162,7 @@ After learning parameters $\bTheta$, one can predict $y$ from input observed var
 
 \subsubsection{Consistency of model structure and genomics assumptions}
 
-The above model specification if used with one multifurcating second-level latent variable and one high-level latent variable of relatively low dimension induces model assumptions we feel are consistent with reasonable assumptions for the datatype, and simultaneously address the challenges of heterogeneity and high-dimensionality. In particular, dimensionality is addressed through the use of relatively low-dimensional latent variables $z_i$ -- on the order of $10^0$ in our simulations.
+The above model specification if used with one multifurcating second-level latent variable and one high-level latent variable of relatively low dimension induces model assumptions we feel are consistent with reasonable assumptions for the datatype, and simultaneously address the challenges of heterogeneity and high-dimensionality. In particular, dimensionality is addressed through the use of relatively low-dimensional latent variables $z_i$ -- on the order of $10^0$ in our simulations and $10^1$ on CGP data.
 
 Heterogeneity is handled as follows: when diagonal noise variances are used for observed variables, this forces covariance within-feature set to be reflected in the latent variable and consequently sibling variables; thus, the latent variable can be seen as storing covariance that is both within-feature type and between-feature type. This is reflected in the associated variable $\W$. In addition, the multi-level hierarchical nature with unconstrained variance between the latent nodes leads to a variable amount of shared-sequencing variance to be used to explain the outcome of interest.
 
@@ -192,9 +192,7 @@ The \textit{training} set would be used to fit the model. The \textit{validation
 
 However, under a relatively limited number of samples, one might perform \textit{cross-validation} in order to assess the prediction error from a limited number of samples. This eschews the need for a validation set, and estimates one based on iteratively holding various small subsets of the data and assessing prediction error on the small subsets.
 
-For expediency and data-size reasons, we chose to use cross-validation in this manner in order to estimate prediction error, and chose to preemptively fix tuning parameters.
-
-In particular, for our model, we chose the dimension of $z_1$ to be $2$ and $z_2$ to be $3$. For logistic regression, we set left the Lasso regularization strength at $C=1$, its default.
+For expediency and data-size reasons, we chose to use cross-validation in this manner in order to estimate prediction error.
 
 Practically, we assessed the below performance by interfacing with \texttt{scikit-learn}\cite{pedregosa_scikit-learn:_2011}, a package with built-in assessment tools, and also used existing machine learning models in this package for comparison. 
 
@@ -208,6 +206,8 @@ In order to complement the ROC curve and AUC, we also studied \textit{confusion 
 \subsection{Simulated data} 
 
 We sought to validate that the model was performing as expected, and also to assess the necessary effect size for a given setting of $N$ and $p$. Effect size was approximated through the setting of a specific parameter of element-wise average $\mathbf{e} \coloneqq \frac{\W}{\bpsi}$ for parameter generation, where a larger setting of this quantity indicated higher signal-to-noise ratio and effect size. In essence, this means that the latent variables of the model explain more about the association between the datatypes than the noise specific to each datatype.
+
+For simulations, we chose the dimension of $z_1$ to be $2$ and $z_2$ to be $3$. For logistic regression, we set left the Lasso regularization strength at $C=1$, its default.
 
 Since we are interested in a classification problem and the model as specified generates floating-point numbers as observed data, we made the additional step of binarizing one of the one-dimensional output nodes based on the empirical mean of the simulated distribution and assessed recovery.
 
@@ -255,22 +255,21 @@ Secondly, we attempted to assess the model performance on  $N = 30$, $p = 500\,0
 
 \subsection{Cancer Genome Project}
 
-First, we assessed the efficacy of the model using both copy-number variation and mutation features. 
+We assessed the efficacy of the model using both copy-number variation and mutation features. 
 
-Mutation information was used on a genic level from any of $64$ preselected ``cancer genes'' by CGP. In particular any mutation occurring anywhere within a gene body resulted in a binary $1$ for that gene in that sample.
+Mutation information was used on a genic level from any of $64$ preselected ``cancer genes'' by CGP\cite{garnett_systematic_2012}. In particular, any mutation occurring anywhere within a gene body resulted in a binary $1$ for that gene in that sample.
 
 Copy-number variation was converted to a natural number representing copies, and was most often $\in \{0,1,2\}$.
 
-Missing data was handled by dropping features with missing information.
+We chose to assess the model on compound ``Y-39983'', as this compound had a relatively balanced outcome of sensitivity across cell lines, easing model assessment. Briefly, this compound is an experimental targeted rho-associated protein kinase inhibitor. $658$ cell lines had available sensitivity information for this compound.
 
-After processing, this resulted in $42$ features.
+Missing data in sequencing features was handled by column-imputation, such that a missing feature for a sample was replaced with the average over all samples for that feature.
 
-With default tuning settings, Logistic regression performed poorly on this dataset, achieving an AUC of $0.500$, which was indistinguishable from chance.
+After processing, this resulted in $469$ features overall, $47$ of which were mutations and the remaining of which were copy number variations, meaning our feature space was a matrix of dimension $658 \times 469$.
 
-HFAM, with hidden dimensionality as in simulation of $2$ and $3$, respectively, also performed poorly.
+In order to address possible overfitting or underfitting, we chose a variety of different model complexities for both logistic regression and HFAM. HFAM performed superior to logistic regression according to AUC metric at all levels of model complexities chosen, with a difference of about $0.07$ in AUC-space at the best-found complexities (see figures \ref{fourcgpone}, \ref{fourcgptwo}, \ref{fourcgpthree}, \ref{fourcgpfour}). 
 
-In order to address concerns that this was due to underfitting due to relatively small number of features and also relatively small number of true positives (as most compounds were only effective on a minority of cell lines), we 
-
+\input{/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch4/cgp.tex}
 
 
 \subsection{Glioma prediction}
