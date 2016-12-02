@@ -255,17 +255,21 @@ Secondly, we attempted to assess the model performance on  $N = 30$, $p = 500\,0
 
 \subsection{Cancer Genome Project}
 
-First, we assessed the efficacy of the model using both expression and mutation information.
+First, we assessed the efficacy of the model using both copy-number variation and mutation features. 
 
-Expression information was used in the form of $z-scores$, derived as described earlier. Mutation information was used on a genic level, where any mutation occurring anywhere within a gene body resulted in a binary $1$ for that gene in that sample.
+Mutation information was used on a genic level from any of $64$ preselected ``cancer genes'' by CGP. In particular any mutation occurring anywhere within a gene body resulted in a binary $1$ for that gene in that sample.
 
-As this was the gene level, there were roughly $26\,000$ features per mutation type.
+Copy-number variation was converted to a natural number representing copies, and was most often $\in \{0,1,2\}$.
 
-Missing information for a gene was imputed based on average for that gene across all samples for which information for that gene was present. 
+Missing data was handled by dropping features with missing information.
 
-Logistic regression performed poorly on this dataset, achieving an AUC of $0.5$, which was indistinguishable from chance.
+After processing, this resulted in $42$ features.
 
-HFAM performed \todo{so how'd it do after I fixed the issues.}
+With default tuning settings, Logistic regression performed poorly on this dataset, achieving an AUC of $0.500$, which was indistinguishable from chance.
+
+HFAM, with hidden dimensionality as in simulation of $2$ and $3$, respectively, also performed poorly.
+
+In order to address concerns that this was due to underfitting due to relatively small number of features and also relatively small number of true positives (as most compounds were only effective on a minority of cell lines), we 
 
 
 
