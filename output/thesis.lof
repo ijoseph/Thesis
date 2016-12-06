@@ -1,0 +1,61 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Illustration of inaccuracy of constituent summing method ($\mathrm {FPKM}_{\mathrm {fusion}}^{\mathrm {const.estimate}}$) for estimating expression of fusion transcript ($\mathrm {FPKM}_\mathrm {fusion}$), resulting in underestimation by a factor of $2$. $\mu _i \mathrel {\mathop :}\mathrel {\mkern -1.2mu}=$ number of reads aligning to transcript $i$; $l_i \mathrel {\mathop :}\mathrel {\mkern -1.2mu}=$ length of transcript $i$. $\mu _{\text {spanning/split}} \mathrel {\mathop :}\mathrel {\mkern -1.2mu}=$: sum of number of PRs and LRs.\relax }}{21}{figure.caption.53}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Model of deregulation for FGFR3-TACC3 fusion\relax }}{25}{figure.caption.67}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Expression of all transcripts in transcriptome for individual\relax }}{26}{figure.caption.68}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Expression of fusion transcripts in the transcriptome showing isoform-resolution expression discrimination\relax }}{27}{figure.caption.69}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Expression of fusion transcript is higher than constituents in same cell and in related normal cells\relax }}{28}{figure.caption.70}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Expression of all transcripts in patient with EGFR3-SEPT14 fusion\relax }}{29}{figure.caption.72}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Three-node HFAM. Here our outcome $\mathaccentV {vec}17E{y}$ is represented by $\mathaccentV {vec}17E{H}$.\relax }}{37}{figure.caption.86}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Bayes' ball depiction of difference of hierarchical model layout\relax }}{39}{figure.caption.88}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces HFAM ROC curves from HFAM-simulated $N=1000, p=10$\relax }}{42}{figure.caption.96}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Logistic regression ROC curves from HFAM-simulated $N=1000, p=10$\relax }}{43}{figure.caption.97}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces HFAM confusion matrices from HFAM-simulated $N=1000, p=10$\relax }}{44}{figure.caption.98}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Logistic regression confusion matrices from HFAM-simulated $N=1000, p=10$\relax }}{45}{figure.caption.99}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces HFAM ROC curves from HFAM-simulated $N=30, p=10$\relax }}{46}{figure.caption.100}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Logistic regression ROC curves from HFAM-simulated $N=30, p=10$\relax }}{47}{figure.caption.101}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces HFAM confusion matrices from HFAM-simulated $N=30, p=10$\relax }}{48}{figure.caption.102}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Logistic regression confusion matrices from HFAM-simulated $N=30, p=10$\relax }}{49}{figure.caption.103}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces HFAM ROC curves from HFAM-simulated $N=1000, p=50\tmspace +\thinmuskip {.1667em}000$\relax }}{50}{figure.caption.105}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Logistic regression ROC curves from HFAM-simulated $N=1000, p=50\tmspace +\thinmuskip {.1667em}000$\relax }}{51}{figure.caption.106}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.13}{\ignorespaces HFAM confusion matrices from HFAM-simulated $N=1000, p=50\tmspace +\thinmuskip {.1667em}000$\relax }}{52}{figure.caption.107}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Logistic regression confusion matrices from HFAM-simulated $N=1000, p=50\tmspace +\thinmuskip {.1667em}000$\relax }}{53}{figure.caption.108}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.15}{\ignorespaces HFAM ROC curves for different levels of model complexity\relax }}{55}{figure.caption.110}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Logistic regression ROC curves for different levels of model complexity\relax }}{56}{figure.caption.111}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.17}{\ignorespaces HFAM confusion matrices for different levels of model complexity\relax }}{57}{figure.caption.112}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Logistic regression confusion matrices for different levels of model complexity\relax }}{58}{figure.caption.113}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Accuracy as assessed by $\frac {\text {true positives} + \text {true negatives} }{ \text {false positives} + \text {false negatives}}$ for two sequencing datatypes according to HFAM approximation. Results similar for logistic regression and linear discriminant analysis models.\relax }}{59}{figure.caption.115}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}

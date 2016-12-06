@@ -1,0 +1,31 @@
+\BOOKMARK [0][-]{section*.1}{Contents}{}% 1
+\BOOKMARK [0][-]{section*.2}{List of Figures}{}% 2
+\BOOKMARK [0][-]{section*.3}{List of Tables}{}% 3
+\BOOKMARK [0][-]{chapter.1}{Goal of collecting genomic data from cancers}{}% 4
+\BOOKMARK [1][-]{section.1.1}{Context}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Investigation}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.3}{Making individualized treatment decisions \(``precision medicine''\)}{chapter.1}% 7
+\BOOKMARK [0][-]{chapter.2}{Properties of analyzed data}{}% 8
+\BOOKMARK [1][-]{section.2.1}{The Cancer Genome Atlas}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.2}{UCSF Department of Neurosurgery glioma samples}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Cancer Genome Project}{chapter.2}% 11
+\BOOKMARK [0][-]{chapter.3}{Identifying impactful fusion genes: fusion expression analysis}{}% 12
+\BOOKMARK [1][-]{section.3.1}{Motivation}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.2}{Existing impact-assessment strategies}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.3}{Method}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.4}{Results}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.5}{Discussion}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Integrating genomics data for prediction, with application to gliomas}{}% 18
+\BOOKMARK [1][-]{section.4.1}{Background}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{Problem formulation}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.3}{Developed method}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.4}{Results}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.5}{Discussion}{chapter.4}% 23
+\BOOKMARK [0][-]{section*.117}{Bibliography}{}% 24
+\BOOKMARK [0][-]{chapter.A}{Three-node model formulation}{}% 25
+\BOOKMARK [1][-]{section.A.1}{Model}{chapter.A}% 26
+\BOOKMARK [1][-]{section.A.2}{Complete log-likelihood}{chapter.A}% 27
+\BOOKMARK [1][-]{section.A.3}{M-Step: finding critical points}{chapter.A}% 28
+\BOOKMARK [1][-]{section.A.4}{E-Step: finding posterior conditional distribution}{chapter.A}% 29
+\BOOKMARK [1][-]{section.A.5}{Finding conditional distribution of outcome observed variable given input observed variables}{chapter.A}% 30
+\BOOKMARK [1][-]{section.A.6}{Finding \040for warm starts where child node is of lower dimension than parent}{chapter.A}% 31

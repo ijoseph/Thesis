@@ -1,0 +1,15 @@
+[0] Config.pm:343> INFO - This is Biber 2.5
+[0] Config.pm:346> INFO - Logfile is '/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.blg'
+[59] biber-darwin:290> INFO - === Mon Dec  5, 2016, 15:51:34
+[85] Biber.pm:351> INFO - Reading '/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.bcf'
+[212] Biber.pm:776> INFO - Found 72 citekeys in bib section 0
+[232] Biber.pm:3493> INFO - Processing section 0
+[252] Biber.pm:3657> INFO - Looking for bibtex format file 'references.bib' for section 0
+[497] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[735] bibtex.pm:1048> INFO - Found BibTeX data source 'references.bib'
+[1367] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1367] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1368] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[1368] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
+[1567] bbl.pm:526> INFO - Writing '/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.bbl' with encoding 'UTF-8'
+[1606] bbl.pm:619> INFO - Output to /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.bbl
