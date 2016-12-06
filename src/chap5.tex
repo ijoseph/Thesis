@@ -1,0 +1,77 @@
+\chapter{Concluding statements}
+
+
+\section{Conclusion}
+Both methods described herein bring us closer to both of our goals: investigation and individualized treatment.
+
+Both goals can be seen in a generalized learning framework, wherein either humans or machines develop and gather evidence towards models of molecular behavior that is inaccessible by direct, real-time observation.
+
+For both human and machine learning, one needs to firstly identify low-level properties of a phenomenon; this can be seen as \textit{feature extraction} in the machine learning. One secondly needs to then use such low-level properties in order to form a coherent model of a phenomenon; this model could be described in words and be the result of several distinct perturbations of related as in the human case, or it could be pre-specified in form mathematically and features could be used as evidence in order to \textit{fit} a given mathematical model.
+
+A classical example could be in vision, wherein spatial regions of light intensity and color correspond to features, and these are used to fit a model of possible structures in the world. The model fitting could be done in a human's brain based on pre-specified, empirically learned constraints on what physical object configurations are possible, or in computer vision by using a model pre-fit with such empirically-learned constraints. 
+
+Here, we make progress on both regards, by (1) extracting the new features of fusion genes' expression and (2) creating a new model for fitting through abstract specification of how sequencing datatypes might correspond to an outcome of interest. 
+
+\subsection{Feature extraction advances}
+
+Features extracted from genomic data may be used individually by investigators with extensive knowledge of current cellular phenomena to generate more accurate causal models of various phenotypes, including oncogenesis, tumor progression, metastases, and survival. Here, we described the extraction of fusion genes' in a more accurate manner based on the use of expression information. The advance is thus twofold: (1) the addition of new features describing fusion gene expression where noen previously existed, and (2) more accurate presence of absence of intermediate features.
+
+Specifically, the existence of RTK fusions in gliomas helped advance our knowledge of the centrality of such proteins in tumor progression within certain molecular classifications of LGG.
+Our developed method allows for ease of doing so from future datasets. 
+
+These features might also be included in a classifier consisting of a model to be fit, assessing survival time or progression.
+
+
+\subsection{Automated modelling advances}
+
+Models to be fit must accurately depict basic assumptions of the phenomenon or at least be robust to violations therein in order to be useful. Here, we successfully created a model that appears to be constitute useful baseline assumptions about how several sequencing datatypes available might relate to one another in ways meaningful for outcomes constituting the reactions to specific compounds.
+
+
+\section{Outlook}
+
+There is much further work to be done to further the use of genomic data for cancer investigation and individualized treatment. This work broadly involves possible advances in data collection, feature extraction, and models. 
+
+\subsection{Data collection opportunities}
+
+As evidence for a phenomenon increases with greater numbers of available observations, more observations would be of great use to increase evidence for relatively weak or rare yet important associations. More data would allow for models of higher complexity to be fit, which may more accurately represent the reality of tumor-related biological processes. It would also manifest in terms of more statistical significance for specific parameters related to increasing human understanding of these processes.
+
+\subsubsection{Economic opportunities}
+
+The cost of collecting genomic information from every patient still remains high in late 2016. In particular, whole genome sequencing (WGS) is typically infeasible for the majority of patients. WGS could be helpful to more accurately assess fusion gene existence and non-genic mutations and variants of interest. Sequencing with longer reads than around 100 base-pairs also remains problematically expensive, which limits our ability to resolve features related to fusion genes and repetitive regions of the genome in general. More detailed epigenetic data, such as histone modifications, could also be of use. 
+
+This cost is particularly concerning due to it excluding the majority of humanity, which does not live in a so-called ``developed'' country able to fund such collection\cite{_97_2015}; even within ``developed'' countries, the majority of diagnosed cancer patients do not have access to facilities performing or organizing sequencing-based assessment. Even if access is possible, the high cost of sequencing (on the scale of $10^4$) not covered by insurance is prohibitive\cite{regalado_why_2016}. This concern is compounded by the fact that such populations also typically lack access to other medical resources and that such lack is arguably not a direct result of any inaction or action by individuals in these populations. Thus, much progress is possible in terms of collecting high amounts of sequencing information from a greater subset of the global population. 
+
+\subsubsection{Data sharing opportunities}
+
+Currently, accessing large amounts of high-quality, well-curated genomic tumor sequencing data is difficult. This is, according to this author, largely due to scientific incentive schemes which are developed around the idea of an individual investigator only directly using data that he or she collects in his or her individual facilities.
+
+Such incentives manifest in the form of manuscript-based compensation assessments, wherein the vast minority of contributors receives the majority of credit. Individualistic incentives also manifest in the form of funding allotments which focus on individual researchers' goals and accomplishments. These incentives are inconsistent with the cost of sequencing and the ability to directly increase the utility of any specific scientific inquiry or model development through the use of others' data. Thus, much rethinking and adaptation of such incentives would be fruitful. 
+
+Additionally, knowledge-sharing necessary for investigations that span disciplines such as this one is disincentivized in the above schemes and also due to an underemphasis on management ability. 
+
+A small handful of institutions such as the Broad Institute, the Institute for Systems Biology, the Memorial Sloan-Kettering Cancer Center, and the Fred Hutchinson Cancer Research Center have made some progress in reframing the context in which tumor genomic data is assessed in order to address these issues by providing common funding for a segment of researchers and common incentive schemes across groups of researchers. Consortium efforts modeled after the Human Genome Project\cite{lander_initial_2001} such as TCGA also provide important progress in this area, but much room for improvement still remains. 
+
+\subsection{Feature extraction opportunities}
+
+There is room for improvement in terms of both the accuracy of current feature
+assessment and in terms of the collection of new, potentially orthogonal sources of information.
+
+\subsubsection{Opportunities for increased accuracy of current features}
+
+All sequencing datatypes mentioned above could be more accurately converted into features than they are currently. 
+
+Higher-depth and longer-read sequencing would provide more confident detection of specific mutations.  This would lead to improvement in the detection and assignment of fusion genes; some of this may come with an increased availability of more robust datatypes, such as sequencing that uses longer reads or higher depth. 
+
+Gene expression features could be collected in a way that more closely relates to which proteins exist in or on the cell at a given point in time, as expressed RNA is merely a surrogate for this true parameter of interest. Ribosomal profiling\cite{ingolia_genome-wide_2009} and reverse-phase protein assay\cite{tibes_reverse_2006} are currently developing technologies for doing so, but limited information exists from these technologies as of this writing. 
+
+
+\subsubsection{Additional feature opportunities}
+New sequencing technologies will also be able to shed light on additional features of interest.
+
+In addition to those mentioned above, more epigenetic information could be extracted, such as using as through the use of HI-C\cite{yaffe_probabilistic_2011} or histone mark-based assessment strategies.
+
+\subsection{Model improvement opportunities}
+
+There exists substantial room for improvement in terms of the specification of integrative models involving several different sequencing datatypes. As the availability of new and more features increases rapidly, model specification innovation needs to follow in order to adapt these new features most effectively towards the goals of investigation and individualized treatment. This will involve the study of these new features' behavior and their relationship to known biological mechanisms. 
+
+One area of possible development that may become useful in this sphere is the use of non-linear models, which may more accurately reflect the behavior of enzymes outside of certain regions and other nonlinear biochemical processes. One promising way that this may be accomplished is through the use of multilayer neural networks models, which can be viewed as automatically extracting higher-level features via nonlinear combinations of existing features \cite{jesse_dunietz_fundamental_2016}.
