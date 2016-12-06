@@ -273,6 +273,8 @@ INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/chap3.aux
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/chap3.aux
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/chap4.aux
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/chap4.aux
+INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/chap5.aux
+INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/chap5.aux
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/appendix.aux
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/appendix.aux
 OUTPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.aux
@@ -561,6 +563,9 @@ INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch4/cgp/log_reg_
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch4/onedatatypecostello.pdf
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch4/onedatatypecostello.pdf
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch4/onedatatypecostello.pdf
+OUTPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/chap5.aux
+INPUT chap5.tex
+INPUT chap5.tex
 INPUT /usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 OUTPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/appendix.aux
 INPUT appendix.tex
@@ -592,6 +597,8 @@ INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/chap3.aux
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/chap3.aux
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/chap4.aux
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/chap4.aux
+INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/chap5.aux
+INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/chap5.aux
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/appendix.aux
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/appendix.aux
 INPUT /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.out

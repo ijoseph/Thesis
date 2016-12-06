@@ -21,11 +21,14 @@
 \BOOKMARK [1][-]{section.4.3}{Developed method}{chapter.4}% 21
 \BOOKMARK [1][-]{section.4.4}{Results}{chapter.4}% 22
 \BOOKMARK [1][-]{section.4.5}{Discussion}{chapter.4}% 23
-\BOOKMARK [0][-]{section*.117}{Bibliography}{}% 24
-\BOOKMARK [0][-]{chapter.A}{Three-node model formulation}{}% 25
-\BOOKMARK [1][-]{section.A.1}{Model}{chapter.A}% 26
-\BOOKMARK [1][-]{section.A.2}{Complete log-likelihood}{chapter.A}% 27
-\BOOKMARK [1][-]{section.A.3}{M-Step: finding critical points}{chapter.A}% 28
-\BOOKMARK [1][-]{section.A.4}{E-Step: finding posterior conditional distribution}{chapter.A}% 29
-\BOOKMARK [1][-]{section.A.5}{Finding conditional distribution of outcome observed variable given input observed variables}{chapter.A}% 30
-\BOOKMARK [1][-]{section.A.6}{Finding \040for warm starts where child node is of lower dimension than parent}{chapter.A}% 31
+\BOOKMARK [0][-]{chapter.5}{Concluding statements}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Conclusion}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.2}{Outlook}{chapter.5}% 26
+\BOOKMARK [0][-]{section*.126}{Bibliography}{}% 27
+\BOOKMARK [0][-]{chapter.A}{Three-node model formulation}{}% 28
+\BOOKMARK [1][-]{section.A.1}{Model}{chapter.A}% 29
+\BOOKMARK [1][-]{section.A.2}{Complete log-likelihood}{chapter.A}% 30
+\BOOKMARK [1][-]{section.A.3}{M-Step: finding critical points}{chapter.A}% 31
+\BOOKMARK [1][-]{section.A.4}{E-Step: finding posterior conditional distribution}{chapter.A}% 32
+\BOOKMARK [1][-]{section.A.5}{Finding conditional distribution of outcome observed variable given input observed variables}{chapter.A}% 33
+\BOOKMARK [1][-]{section.A.6}{Finding \040for warm starts where child node is of lower dimension than parent}{chapter.A}% 34

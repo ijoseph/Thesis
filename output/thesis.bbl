@@ -23,6 +23,23 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global/}
+    \entry{_97_2015}{online}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{5a7694b2c36c7534b22948c31e4b7920}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Developing regions will see 97\% of the world’s population growth of 1.2 billion people between 2013 and 2030, research by Roland Berger finds. In the same period the median age will increase to 33.}
+      \field{title}{97\% of Population Growth to Be in Developing World}
+      \field{urlday}{06}
+      \field{urlmonth}{12}
+      \field{urlyear}{2016}
+      \field{year}{2015}
+      \verb{file}
+      \verb Snapshot:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/A5JSZF4K/97-percent-of-population-growth-to-be-in-developing-world.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.consultancy.uk/news/2191/97-percent-of-population-growth-to-be-in-developing-world
+      \endverb
+    \endentry
     \entry{altschul_basic_1990}{article}{}
       \name{author}{3}{}{%
         {{hash=a928ba6f6f5a34dc80aebe0b359e4d77}{%
@@ -1733,6 +1750,78 @@
       \verb http://www.nature.com/ng/journal/v28/n1/abs/ng0501_53.html
       \endverb
     \endentry
+    \entry{ingolia_genome-wide_2009}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4284a702aa95cc5107852f28a92bab58}{%
+           family={Ingolia},
+           family_i={I\bibinitperiod},
+           given={Nicholas\bibnamedelima T.},
+           given_i={N\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=90f21c2b627edf0c61c3018671bc739e}{%
+           family={Ghaemmaghami},
+           family_i={G\bibinitperiod},
+           given={Sina},
+           given_i={S\bibinitperiod}}}%
+        {{hash=b068862e1992b61ae258826582a193ec}{%
+           family={Newman},
+           family_i={N\bibinitperiod},
+           given={John\bibnamedelima RS},
+           given_i={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=bad4feb6886c9be5fad6425bd29bc01a}{%
+           family={Weissman},
+           family_i={W\bibinitperiod},
+           given={Jonathan\bibnamedelima S.},
+           given_i={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9e10d76ac210aa6cb26351dedbe30fa}
+      \strng{fullhash}{0fb689f0cfb83c9f4052cc0f4e55e91c}
+      \field{sortinit}{I}
+      \field{sortinithash}{25e99d37ba90f7c4fb20baf4e310faf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{science}
+      \field{number}{5924}
+      \field{title}{Genome-Wide Analysis in Vivo of Translation with Nucleotide Resolution Using Ribosome Profiling}
+      \field{urlday}{06}
+      \field{urlmonth}{12}
+      \field{urlyear}{2016}
+      \field{volume}{324}
+      \field{year}{2009}
+      \field{pages}{218\bibrangedash 223}
+      \range{pages}{6}
+      \verb{file}
+      \verb Snapshot:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/EBEHIJ3V/218.html:text/html;[HTML] nih.gov:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/P4PCK974/PMC2746483.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://science.sciencemag.org/content/324/5924/218.short
+      \endverb
+    \endentry
+    \entry{jesse_dunietz_fundamental_2016}{online}{}
+      \name{author}{1}{}{%
+        {{hash=db310f36db86f7897d94504c08cbb73b}{%
+           family={{Jesse Dunietz}},
+           family_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{db310f36db86f7897d94504c08cbb73b}
+      \strng{fullhash}{db310f36db86f7897d94504c08cbb73b}
+      \field{sortinit}{J}
+      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A few months ago, my aunt sent her colleagues an email with the subject, “Math Problem! What is the answer?” It contained a deceptively\&\#8230;}
+      \field{journaltitle}{Nautilus}
+      \field{title}{The {{Fundamental Limits}} of {{Machine Learning}} - {{Facts So Romantic}}}
+      \field{urlday}{06}
+      \field{urlmonth}{12}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \verb{file}
+      \verb Snapshot:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/B6GAXJH9/the-fundamental-limits-of-machine-learning.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://nautil.us/blog/the-fundamental-limits-of-machine-learning
+      \endverb
+    \endentry
     \entry{johnson_mutational_2014}{article}{}
       \name{author}{34}{}{%
         {{hash=4e4114b5911cebf08201b4b53237d0ed}{%
@@ -2151,6 +2240,84 @@
       \endverb
       \verb{url}
       \verb http://onlinelibrary.wiley.com/doi/10.1002/wrna.1382/abstract
+      \endverb
+    \endentry
+    \entry{lander_initial_2001}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=b59f757bbe7fe1d73139d3960737d98a}{%
+           family={Lander},
+           family_i={L\bibinitperiod},
+           given={Eric\bibnamedelima S.},
+           given_i={E\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=874f97a1c0a039186eb71633bf334059}{%
+           family={Linton},
+           family_i={L\bibinitperiod},
+           given={Lauren\bibnamedelima M.},
+           given_i={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=f76fa9f25a72966f96af1dd7f42a9d7b}{%
+           family={Birren},
+           family_i={B\bibinitperiod},
+           given={Bruce},
+           given_i={B\bibinitperiod}}}%
+        {{hash=62906b245bcf166af3723a13f3db6595}{%
+           family={Nusbaum},
+           family_i={N\bibinitperiod},
+           given={Chad},
+           given_i={C\bibinitperiod}}}%
+        {{hash=dd1f43def0ff4fe5c6e61dbaf93fc89a}{%
+           family={Zody},
+           family_i={Z\bibinitperiod},
+           given={Michael\bibnamedelima C.},
+           given_i={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=3b261087300e067f64a0d7d352c7f0b0}{%
+           family={Baldwin},
+           family_i={B\bibinitperiod},
+           given={Jennifer},
+           given_i={J\bibinitperiod}}}%
+        {{hash=184407226652e360fcd8c4c95d8b3d21}{%
+           family={Devon},
+           family_i={D\bibinitperiod},
+           given={Keri},
+           given_i={K\bibinitperiod}}}%
+        {{hash=2a35835a65ee72b1285d5221fb64981d}{%
+           family={Dewar},
+           family_i={D\bibinitperiod},
+           given={Ken},
+           given_i={K\bibinitperiod}}}%
+        {{hash=3c7f6c3b2e25c61503615641283c1d5c}{%
+           family={Doyle},
+           family_i={D\bibinitperiod},
+           given={Michael},
+           given_i={M\bibinitperiod}}}%
+        {{hash=f94a4d0086b8818823c11dd4c4d6327a}{%
+           family={FitzHugh},
+           family_i={F\bibinitperiod},
+           given={William},
+           given_i={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{34272ced2ef15ccef78fd2c3177a91d9}
+      \strng{fullhash}{f4ea5d0b9c8910424083bbc4085c7e1a}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{6822}
+      \field{title}{Initial Sequencing and Analysis of the Human Genome}
+      \field{urlday}{06}
+      \field{urlmonth}{12}
+      \field{urlyear}{2016}
+      \field{volume}{409}
+      \field{year}{2001}
+      \field{pages}{860\bibrangedash 921}
+      \range{pages}{62}
+      \verb{file}
+      \verb Snapshot:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/9DIC2WES/409860a0.html:text/html;[HTML] nature.com:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/MXCMS68K/409860a0.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.nature.com/nature/journal/v409/n6822/abs/409860a0.html
       \endverb
     \endentry
     \entry{langmead_fast_2012}{article}{}
@@ -5511,6 +5678,34 @@
       \endverb
       \keyw{MGMT methylation,SNP,survival}
     \endentry
+    \entry{regalado_why_2016}{online}{}
+      \name{author}{1}{}{%
+        {{hash=059590fc7f2df8fd17c639b69ec003c6}{%
+           family={Regalado},
+           family_i={R\bibinitperiod},
+           given={Antonio},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{059590fc7f2df8fd17c639b69ec003c6}
+      \strng{fullhash}{059590fc7f2df8fd17c639b69ec003c6}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{To match cancer patients with drugs, one company plans to offer free genetic tests.}
+      \field{journaltitle}{MIT Technology Review}
+      \field{title}{Why One Company Wants to Give Away Cancer Tests}
+      \field{urlday}{06}
+      \field{urlmonth}{12}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \verb{file}
+      \verb Snapshot:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/DAM2FZVG/should-we-sequence-the-dna-of-every-cancer-patient.html:text/html
+      \endverb
+      \verb{url}
+      \verb https://www.technologyreview.com/s/601611/should-we-sequence-the-dna-of-every-cancer-patient/
+      \endverb
+    \endentry
     \entry{roberts_fragment_2013}{article}{}
       \name{author}{3}{}{%
         {{hash=243c03e5ae8031582d6af9fcbc70f629}{%
@@ -6553,6 +6748,82 @@
       \verb https://www.thieme-connect.com/ejournals/html/10.1055/s-2004-814157
       \endverb
     \endentry
+    \entry{tibes_reverse_2006}{article}{}
+      \name{author}{7}{}{%
+        {{hash=1b0536f49356e31b2a41167c044bf618}{%
+           family={Tibes},
+           family_i={T\bibinitperiod},
+           given={Raoul},
+           given_i={R\bibinitperiod}}}%
+        {{hash=422d4a2a91e14730374979c3133ee1dc}{%
+           family={Qiu},
+           family_i={Q\bibinitperiod},
+           given={YiHua},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=3241715d59d53dec8b5e5756af6585fe}{%
+           family={Lu},
+           family_i={L\bibinitperiod},
+           given={Yiling},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=daf5e7ef5000fd98fe0a143f8fd1e885}{%
+           family={Hennessy},
+           family_i={H\bibinitperiod},
+           given={Bryan},
+           given_i={B\bibinitperiod}}}%
+        {{hash=d9d6f249d91252dc1e91c51f21b1f1d6}{%
+           family={Andreeff},
+           family_i={A\bibinitperiod},
+           given={Michael},
+           given_i={M\bibinitperiod}}}%
+        {{hash=971bd336dcec9bbf3992aa88d0a3cef9}{%
+           family={Mills},
+           family_i={M\bibinitperiod},
+           given={Gordon\bibnamedelima B.},
+           given_i={G\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=7c852f4545234b2bdc393beeeac21413}{%
+           family={Kornblau},
+           family_i={K\bibinitperiod},
+           given={Steven\bibnamedelima M.},
+           given_i={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{11a86e01df09b91944119d674a4beb91}
+      \strng{fullhash}{0ea20f3871536732d36d70b363b26db3}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Proteomics has the potential to provide answers in cancer pathogenesis and to direct targeted therapy through the comprehensive analysis of protein expression levels and activation status. The realization of this potential requires the development of new, rapid, high-throughput technologies for performing protein arrays on patient samples, as well as novel analytic techniques to interpret them. Herein, we describe the validation and robustness of using reverse phase protein arrays (RPPA) for the analysis of primary acute myelogenous leukemia samples as well as leukemic and normal stem cells. In this report, we show that array printing, detection, amplification, and staining precision are very high, reproducible, and that they correlate with traditional Western blotting. Using replicates of the same sample on the same and/or separate arrays, or using separate protein samples prepared from the same starting sample, the intra- and interarray reproducibility was extremely high. No statistically significant difference in protein signal intensities could be detected within the array setups. The activation status (phosphorylation) was maintained in experiments testing delayed processing and preparation from multiple freeze-thawed samples. Differences in protein expression could reliably be detected in as few as three cell protein equivalents. RPPA prepared from rare populations of normal and leukemic stem cells were successfully done and showed differences from bulk populations of cells. Examples show how RPPAs are ideally suited for the large-scale analysis of target identification, validation, and drug discovery. In summary, RPPA is a highly reliable, reproducible, high-throughput system that allows for the rapid large-scale proteomic analysis of protein expression and phosphorylation state in primary acute myelogenous leukemia cells, cell lines, and in human stem cells. [Mol Cancer Ther 2006;5(10):2512–21]}
+      \field{day}{10}
+      \field{eprinttype}{pmid}
+      \field{issn}{1535-7163, 1538-8514}
+      \field{journaltitle}{Molecular Cancer Therapeutics}
+      \field{langid}{english}
+      \field{month}{01}
+      \field{number}{10}
+      \field{shortjournal}{Mol Cancer Ther}
+      \field{shorttitle}{Reverse Phase Protein Array}
+      \field{title}{Reverse Phase Protein Array: Validation of a Novel Proteomic Technology and Utility for Analysis of Primary Leukemia Specimens and Hematopoietic Stem Cells}
+      \field{urlday}{26}
+      \field{urlmonth}{03}
+      \field{urlyear}{2014}
+      \field{volume}{5}
+      \field{year}{2006}
+      \field{pages}{2512\bibrangedash 2521}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1158/1535-7163.MCT-06-0334
+      \endverb
+      \verb{eprint}
+      \verb 17041095
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/7B88JETU/Tibes et al. - 2006 - Reverse phase protein array validation of a novel.pdf:application/pdf;Snapshot:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/HPDMUAQ9/2512.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://mct.aacrjournals.org/content/5/10/2512
+      \endverb
+      \keyw{AML,Reverse phase protein arrays,RPPA}
+    \endentry
     \entry{tipping_mixtures_1999}{article}{}
       \name{author}{2}{}{%
         {{hash=da28a755c865268360d92a89f5d7501f}{%
@@ -7301,6 +7572,50 @@
       \endverb
       \verb{url}
       \verb http://www.degruyter.com/view/j/sagmb.2009.8.1/sagmb.2009.8.1.1470/sagmb.2009.8.1.1470.xml;jsessionid=E7A72A14672827A169BB102DFA3C196B
+      \endverb
+    \endentry
+    \entry{yaffe_probabilistic_2011}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6eb5b508053751d536a8c2000fe27e2b}{%
+           family={Yaffe},
+           family_i={Y\bibinitperiod},
+           given={Eitan},
+           given_i={E\bibinitperiod}}}%
+        {{hash=8ed8f932ff5ea8b6989baf1378d3e0b1}{%
+           family={Tanay},
+           family_i={T\bibinitperiod},
+           given={Amos},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{5a10a02933d95b3867aa0e3c8f3a9726}
+      \strng{fullhash}{5a10a02933d95b3867aa0e3c8f3a9726}
+      \field{sortinit}{Y}
+      \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Hi-C experiments measure the probability of physical proximity between pairs of chromosomal loci on a genomic scale. We report on several systematic biases that substantially affect the Hi-C experimental procedure, including the distance between restriction sites, the GC content of trimmed ligation junctions and sequence uniqueness. To address these biases, we introduce an integrated probabilistic background model and develop algorithms to estimate its parameters and renormalize Hi-C data. Analysis of corrected human lymphoblast contact maps provides genome-wide evidence for interchromosomal aggregation of active chromatin marks, including DNase-hypersensitive sites and transcriptionally active foci. We observe extensive long-range (up to 400 kb) cis interactions at active promoters and derive asymmetric contact profiles next to transcription start sites and CTCF binding sites. Clusters of interacting chromosomal domains suggest physical separation of centromere-proximal and centromere-distal regions. These results provide a computational basis for the inference of chromosomal architectures from Hi-C experiments.}
+      \field{issn}{1061-4036}
+      \field{journaltitle}{Nature Genetics}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{11}
+      \field{shortjournal}{Nat Genet}
+      \field{title}{Probabilistic Modeling of {{Hi}}-{{C}} Contact Maps Eliminates Systematic Biases to Characterize Global Chromosomal Architecture}
+      \field{urlday}{31}
+      \field{urlmonth}{01}
+      \field{urlyear}{2014}
+      \field{volume}{43}
+      \field{year}{2011}
+      \field{pages}{1059\bibrangedash 1065}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1038/ng.947
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/UUNXS3AJ/Yaffe and Tanay - 2011 - Probabilistic modeling of Hi-C contact maps elimin.pdf:application/pdf;Snapshot:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/2A8QIP98/ng.947.html:text/html;Snapshot:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/IPIBTE2I/ng.947.html:text/html;Snapshot:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/WIJVJGNK/ng.947.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.nature.com/ng/journal/v43/n11/full/ng.947.html#affil-auth
       \endverb
     \endentry
     \entry{yang_diverse_2013}{article}{}
