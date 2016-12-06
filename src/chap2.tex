@@ -47,7 +47,7 @@ $96.5\%$ average mapping rate.
 
 \subsection{Clinical information}
 
-In order assess the impact of sequencing data relative to various
+To assess the impact of sequencing data relative to various
 outcomes and to also correlate various molecular features with known
 features, classical clinical information was obtained in addition to
 the molecular inforation. In particular, histologic type, age of
@@ -264,7 +264,7 @@ Genomic copy number segments are called from exome-sequencing
 information due to newly developed pipelines, and validated with
 intensity information from 450k.
 
-This results in segments of floating point-numer representing copy
+This results in segments of floating point-numbers representing copy
 number, averaged across cells in a sample. To further process, we took
 floating point numbers more than $0.5$ away from $2$.
 
@@ -275,7 +275,7 @@ exome-sequencing information, using GATK. This results
 each variant of one or more nucleotides on a base-pair resolution
 between tumor and normal sequencing information.
 
-There were a group of ampels where the number of mutations was more than $10 \times$
+There were a group of samples where the number of mutations was more than $10 \times$
 higher, on average, than the other group of samples; these samples
 were considered to having undergone \textit{hypermutation} (HM). 
 
@@ -424,29 +424,28 @@ each compound:
   For each cell line, a normal distribution was fit with mean equal to
   the average $\text{IC}_{50}$ over the different samples, and
   standard deviation equivalent to a $68\%$ estimated confidence
-  interval. $1\,000$ points were then sampled from the fit normal
+  interval. $1,000$ points were then sampled from the fit normal
   distribution.
 
   
 \item[2. density estimation]
-  A density was estimated from the $1\,000$ points using kernel
+  A density was estimated from the $1,000$ points using kernel
   density estimation with normal kernels.
 
   
 \item[3. modeling resistant population]
-  Based on the shape fo the resultant density estimation, a resistant population of cell lines, for each compound, were
+  Based on the shape of the resultant density estimation, a resistant population of cell lines, for each compound, were
   identified in an automated fashion. Briefly, a strong prior that the
   majority of cell lines would be resistant was a major assumption
   that went into this; the method attempted to find bimodal structure
   consisting of a mixture of normal distributions; it then assigned
-  the node with the higher$\text{IC}_{50}$ as the resistant
+  the node with the higher $\text{IC}_{50}$ as the resistant
   population. 
 
   
 \item[4. calling threshold based on cumulative distribution function]
-  Finally, using an empirical cumulative distribution on the estimated
-  sensitive population so as to include most of these, a threshold was
-  called.   
+  Finally, a threshold was called using an empirical cumulative distribution on the estimated
+  sensitive population so as to include most of these. 
 \end{description}
 
 

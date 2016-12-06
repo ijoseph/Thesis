@@ -5,9 +5,9 @@
 One specific prediction problem in gliomas, specifically LGGs, is related to response to chemotherapy. Currently, there is no suggested guideline, according to the World Health Organization and no standard practice between care centers as to whether or not to give chemotherapy following initial resection of the primary tumor in LGG patients.
 
 In particular, temozolomide (TMZ) is given to about 50\% of patients being given TMZ following 
-primary therapy. Confounding this decision is the recent finding by Johnson et al. that TMZ appears to be inducing mutations in certain patients which may increase the severity of the recurrent tumor in terms of grade16. 
+primary therapy. Confounding this decision is the recent finding by Johnson et al. that TMZ appears to be inducing mutations in certain patients which may increase the severity of the recurrent tumor in terms of grade. 
 
-However, it is possible that high-throughput (HT) genomic data might be able to assist in this treatment decision-making problem via predictions. Empirically, several survival time-related HT features have been identified by TCGA; since some of these patients have been treated with TMZ, it’s possible that said molecular features might inform recurrence grade decisions for these patients as well, since recurrence grade is associated statistically with survival time. 
+However, it is possible that high-throughput (HT) genomic data might be able to assist in this treatment decision-making problem via predictions. Empirically, several survival time-related HT features have been identified by TCGA; since some of these patients have been treated with TMZ, it is possible that said molecular features might inform recurrence grade decisions for these patients as well, since recurrence grade is associated statistically with survival time. 
 Molecularly (theoretically), the mechanism behind TMZ-induced greater recurrence is partially known.
 
 \subsection{Candidate molecular mechanism}
@@ -29,14 +29,14 @@ In order to address this issue, smoothing parameters can be added to $f$ in orde
 association. However, this may still lead to an overall reduction in the expected predicted error, which is a function of both bias and variance of $f$.
 
 
-One of the model assumptions that we make is linearity (specifically, that $f$ uses first-order linear terms to manipulate $\vec{x}$ for performing predictions of $y$, which is a common assumption. This is implemented by linear dimensionality reduction techniques – specifically, the factor association analysis (FAA) method.
+One of the model assumptions that we make is linearity (specifically, that $f$ uses first-order linear terms to manipulate $\vec{x}$ for performing predictions of $y$, which is a common assumption \cite{friedman_elements_2001} useful for simplification of $f$. This is implemented by linear dimensionality reduction techniques – specifically, the factor association analysis (FAA) method.
 
 \subsection{Heterogeneity challenge}
 
 A fundamental challenge with this prediction problem is the heterogeneity of data types involved the prediction problem. In particular, there is molecular data which may include germline variants of various forms detected by various different exome sequencing pipelines, gnomic copy number data based on arrays and/or DNA-sequencing, expression detected by a RNA-seq and/or microarray platforms, methylation detected by microarrays and/or sequencing-based techniques, and uni-dimensional clinical covariates. 
 
 
-In particular, this will manifest as different underlying distributions that best approximate of each data type, both between patients within a specific modality (due to heterogeneity of platforms) and between modalities within a specific patient.
+In particular, this will manifest as different underlying distributions that best approximate each data type, both between patients within a specific modality (due to heterogeneity of platforms) and between modalities within a specific patient.
 
 
 \subsubsection{Unsupervised solutions}
@@ -45,7 +45,7 @@ Unsupervised machine learning approaches, which seek to more clearly represent v
 
 \begin{description}
 \item[Consensus clustering]
-  \textit{Consensus clustering} or \textit{cluster-of-cluster} \cite{kristensen_principles_2014-1} methods combine datatypes by hierarchically clustering samples within each datatype, then using the specific cluster assigned per data-type as a feature for a meta-clustering approach. This is best used successfully in situations where variance is shared among multiple different genomic datatypes, \textit{and} that shared variance is mostly or largely a component of the outcome of interest.
+  \textit{Consensus clustering} or \textit{cluster-of-cluster} \cite{kristensen_principles_2014-1} methods combine datatypes by hierarchically clustering samples within each datatype, then using the specific cluster assigned per data-type as a feature for a meta-clustering approach. This is best used successfully in situations where variance is shared among multiple different genomic datatypes, \textit{and} that shared variance is mostly or largely a component of the outcome of interest. This was used by collaborators at UCSF as part of the TCGA LGG AWG \cite{_comprehensive_2015}, where shared variance across datatypes was associated with survival time.
 
 \item[factor analysis-based approaches] Approaches such as iCluster \cite{shen_integrative_2012}\cite{shen_integrative_2009} use an explicit probabilistic generative model in order to reduce dimensionality and simultaneously find shared variance among a different number of sequencing datatypes, allowing for parametric assumptions useful for sequencing data type distributions (for example, modelling mutation calls as Bernoulli random variables). This approach has not been heretofore expanded into a supervised setting.
 
@@ -76,13 +76,13 @@ This is less appropriate for linear models. Thus, a few linear supervised machin
 \item[canonical correlation analysis-based approaches]
   Canonical correlation analysis, which is originally an unsupervised technique to find shared variance between two feature sets, has been adapted into supervised models by adding an outcome of interest \cite{shen_novel_2014} \cite{bair_prediction_2006}\cite{yu_supervised_2006}\cite{witten_extensions_2009}. This was used with some success by Drs. Robert Tibshirani and Samuel Gross as a predictor for diffuse B-cell lymphoma prediction of copy number. Recently, an extension was proposed: the \textit{Collaborative Regression} method\cite{gross_collaborative_2015}. This method addressed shortcomings of previous methods by formulating the problem in a way that is convex, and therefore algorithmically efficient.
 
-  However, these methods were not specified probabilistically, and therefore are not as amenable to extensions involving explicit data type distribution specifications. In addition, the adaptation of CCA used above was approximate, and thereby is possibly less statistically powerful than a precise (probabilistic) specification. Furthermore, not being probabilistic, these models can not be used to generatively, preventing them using simulation to assess model performance parameters, such as requisite $N$, $p$, and effect size. 
+  However, these methods were not specified probabilistically, and therefore are not as amenable to extensions involving explicit data type distribution specifications. In addition, the adaptation of CCA used above was approximate, and thereby is possibly less statistically powerful than a precise (probabilistic) specification. Furthermore, not being probabilistic, these models cannot be used generatively, preventing them using simulation to assess model performance parameters, such as requisite $N$, $p$, and effect size. 
   
 \end{description}
 
 
 \subsection{Dimensionality challenge}
-A perhaps bigger fundamental challenge with this prediction problem is what’s referred to as “the curse of high-dimensionality,” that is to say, there are many more covariates/predictors ($\text{number of predictors} \coloneqq p $) than observations ($N$) (i.e., $p \gg N$).  This is inherent to this problem due to the wildly high-dimensionality of the molecular datasets, which at their current maximum for even a single modality is about $500\,000$ with reasonable granularity, but could theoretically be on the order of $10^9$. This is manifests as an issue by leading to overfitting or equivalently, high variance in estimators of associations.
+A perhaps bigger fundamental challenge with this prediction problem is what is referred to as “the curse of high-dimensionality,” that is to say, there are many more covariates/predictors ($\text{number of predictors} \coloneqq p $) than observations ($N$) (i.e., $p \gg N$).  This is inherent to this problem due to the wildly high-dimensionality of the molecular datasets, which at their current maximum for even a single modality is about $500,000$ with reasonable granularity, but could theoretically be on the order of $10^9$. This is manifests as an issue by leading to overfitting or equivalently, high variance in estimators of associations.
 
 Fortunately, these problems are not unique to this particular prediction problem, and consequently, several techniques have been developed to deal with both of these fundamental challenges. 
 
@@ -94,7 +94,7 @@ Subset selection involves using only a subset of available features, which must 
 
 A standard method of addressing high-dimensionality and related high variance of any estimated fit parameters that stymie attempts to generalize is by adding a model term that explicitly adds a penalization on the use of each parameter. An optimization is then performed over this adjusted function. Relatedly, a constraint can be placed on the size of the features and solutions within a particular constraint can be sought. Parameters involving the degree of regularization are selected based on a \textit{model selection} step, which typically attempts to assess the expected prediction error of a model with several different parameter settings in order to identify the most accurate combination. 
 
-The specific penalty that is applied to each feature may be \textit{Lasso}, which is uses the $L1$-norm of the vector of coefficients: $\sum_{j=1}^p | \beta_j | \leq t$, where $\beta_j$ is each coefficient on the $p$ parameters, and $t$ is a pre-specified constant. Another common approach is \textit{Ridge}, which uses the $L2$-norm of the coefficient vector:  $\sum_{j=1}^p  \beta_j^2  \leq t$. These have different properties, with Lasso generally leading to more sparsity. However, this may be an incorrect assumption that hurts generalizability; to address this, \textit{Elastic Net} regression was created, which involves a hyper-parameter that is specified to address the relative contribution of ridge and lasso constraints. 
+The specific penalty that is applied to each feature may be \textit{Lasso}, which uses the $L1$-norm of the vector of coefficients: $\sum_{j=1}^p | \beta_j | \leq t$, where $\beta_j$ is each coefficient on the $p$ parameters, and $t$ is a pre-specified constant. Another common approach is \textit{Ridge}, which uses the $L2$-norm of the coefficient vector:  $\sum_{j=1}^p  \beta_j^2  \leq t$. These have different properties, with Lasso generally leading to more sparsity. However, this may be an incorrect assumption that hurts generalizability; to address this, \textit{Elastic Net} regression was created, which involves a hyper-parameter that is specified to address the relative contribution of ridge and lasso constraints. 
 
 
 \subsubsection{Dimensionality-reduction approaches}
@@ -113,7 +113,7 @@ This method’s development came about due to the observation by Novembre and St
 Novembre’s result can be interpreted as much of the first two statistically independent sources of variance in the common gene variants ``explains'' their geographic location. This knowledge can then be used to decrease geographically-related variance in the germline variants of patients in GWAS studies, increasing their statistical power by decreasing noise.
 
 
-Recently, gene expression information has also begun to be collected on a large sale, enabled be recent decreases in technology price. Dr. Lior Pachter, Dr. Nicholas Bray, Brielin Brown, and Dr. McCurdy consequently wondered if gene expression information also contained significant geographic signal, and consequently performed PCA on the gene expression matrix $\mathbf{G}$ $(\text{people} \times \text{genes})$. However, the first few components did not correlate directly with geography.
+Recently, gene expression information has also begun to be collected on a large sale, enabled by recent decreases in technology price. Dr. Lior Pachter, Dr. Nicholas Bray, Brielin Brown, and Dr. McCurdy consequently wondered if gene expression information also contained significant geographic signal, and consequently performed PCA on the gene expression matrix $\mathbf{G}$ $(\text{people} \times \text{genes})$. However, the first few components did not correlate directly with geography.
 
 
 This then led to the application of canonical correlation analysis (CCA) to this dataset in order to directly find shared variance between the two-dimensional geographic origin ($\mathbf{R}: \text{people} \times (\text{latitude}, \text{ longitude}$)) of the individuals and their high-dimensional associated gene expression vector (i.e., CCA between $\mathbf{G}$ and $\mathbf{R}}$). Briefly, CCA is analogous to PCA, except for linear combinations are taken of both matrices (termed ``canonical functions'' (CFs)) instead of just one matrix, and they are taken in ways that maximize the correlation between the linear combinations of one matrix with the other. The first two canonical components (CCs) in the above analysis therefore, by construction, should have significant correlation with the geographic coordinates, at least inasmuch as the component on the geographic matrix.
@@ -123,7 +123,7 @@ This was indeed found to be the case; however, it was quickly realized when doin
 
 \subsubsection{Formulation based on PCA and CCA}
 
-Out of this was borne an inspiration to use probabilistic model to create more nuanced dependency relationships between various datatypes.
+Out of this was borne an inspiration to use a probabilistic model to create more nuanced dependency relationships between various datatypes.
 
 
 PCA\cite{tipping_probabilistic_1999}, which can be interpreted as probabilistic graphical model with a latent variable emitting an observed variable based on a dimensionality expansion plus diagonal noise.
@@ -158,7 +158,7 @@ As a graphical model, this can be viewed as a multifurcating tree, with root $\z
 \end{figure}
 
 
-This model can be seen as imposing a specific structure on the covariance matrix of the data which is approrpiate for the supervised modeling of sequencing data towards a specific response. In particular, it imposes a block joint covariance structure. See appendix for an example.  
+This model can be seen as imposing a specific structure on the covariance matrix of the data which is appropriate for the supervised modeling of sequencing data towards a specific response. In particular, it imposes a block joint covariance structure. See appendix for an example.  
 
 Inference is done using the expectation-maximization (EM) algorithm in order to estimate the parameters: $\bTheta \coloneqq \left\{\W_i, \bpsi_i \right\}_{i=1}^{n_x + n_z}$ as well as the latent variables $\z_1,... \z_{n_z}$. See the appendix for EM parameter updates derived for a three-node model. 
 
@@ -225,7 +225,7 @@ We sought to validate that the model was performing as expected, and also to ass
 
 For simulations, we chose the dimension of $z_1$ to be $2$ and $z_2$ to be $3$. For logistic regression, we set left the Lasso regularization strength at $C=1$, its default.
 
-Since we are interested in a classification problem and the model as specified generates floating-point numbers as observed data, we made the additional step of binarizing one of the one-dimensional output nodes based on the empirical mean of the simulated distribution and assessed recovery.
+Since we are interested in a classification problem and the model as specified generates floating-point numbers as observed data, we made the additional step of binarizing one of the one-dimensional output nodes based on the empirical mean of the simulated distribution. 
 
 
 \subsubsection{$\mathbf{p \ll N}$}
@@ -256,17 +256,17 @@ First, we sought to assess whether the model would lead to more accurate recover
 Secondly, we sought to assess the model's performance for data with dimensions that approximated the dimensions of real genomic data.
 
 \begin{description}
-\item[$\mathbf{N = 1\,000, p = 50\,000}$] 
+\item[$\mathbf{N = 1,000, p = 50,000}$] 
 
-First, we assessed its performance on $p = 50\,000$, which is similar to two datatypes' dimensions from the Cancer Genome Project.
+First, we assessed its performance on $p = 50,000$, which is similar to two datatypes' dimensions from the Cancer Genome Project.
 
 Here, we found the model slightly superior than logistic regression, and requisite $e$ to be $1.25$ for what we consider adequate prediction accuracy (AUC $\appox 0.85$) (see figures \ref{fourfourone}, \ref{fourfourtwo}, \ref{fourfourthree}, \ref{fourfourfour}).
 
 \input{/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch4/n_1000_p_50k.tex}
 
 
-\item[$\mathbf{N = 30, p = 500\,000}$] 
-Secondly, we attempted to assess the model performance on  $N = 30$, $p = 500\,000$, which is similar to Costello's data size, but found performance prohibitive without further algorithmic optimization. In lieu of this, we opted to preemptively reduce dimensionality for the Costello dataset (see below).
+\item[$\mathbf{N = 30, p = 500,000}$] 
+Secondly, we attempted to assess the model performance on  $N = 30$, $p = 500,000$, which is similar to Costello's data size, but found performance prohibitive without further algorithmic optimization. In lieu of this, we opted to preemptively reduce dimensionality for the Costello dataset (see below).
 \end{description}
 
 \subsection{Cancer Genome Project}
@@ -308,7 +308,7 @@ Thus, we might choose to use sequencing data collected post-second surgery to se
 
 We chose to use methylation and mutation information, as these datatypes were available for the highest number of samples.
 
-In order to reduce dimensionality for the purposes of computational tractability and biologically mechanistic interpretability, we would choose the $50\,000$ most variable methylation probes, pursuant to suggestions from Dr. Matthew Grimmer as to the most cogent way to reduce methylation dimensionality. In particular, this is hypothesized to be superior to alternate approaches. One possible alternate approach would be to binning based on specific regions, as related glioma methylation changes often occur on a single-CpG-site basis, rather than on a large scale basis.
+In order to reduce dimensionality for the purposes of computational tractability and biologically mechanistic interpretability, we would choose the $50,000$ most variable methylation probes, pursuant to suggestions from Dr. Matthew Grimmer as to the most cogent way to reduce methylation dimensionality. In particular, this is hypothesized to be superior to alternate approaches. One possible alternate approach would be to binning based on specific regions, as related glioma methylation changes often occur on a single-CpG-site basis, rather than on a large scale basis.
 
 \section{Discussion}
 
