@@ -5272,6 +5272,24 @@
       \verb http://bioinformatics.oxfordjournals.org/content/28/18/i640
       \endverb
     \endentry
+    \entry{_nih_2005}{online}{}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Cancer Genome Atlas - National Cancer Institute}
+      \field{title}{{{NIH Launches Comprehensive Effort}} to {{Explore Cancer Genomics}}}
+      \field{type}{{{tcgaNewsRelease}}}
+      \field{urlday}{07}
+      \field{urlmonth}{12}
+      \field{urlyear}{2016}
+      \field{year}{2005}
+      \verb{file}
+      \verb Snapshot:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/PNJPE8BT/NIH Launches Comprehensive Effort to Explore Cance.html:text/html
+      \endverb
+      \verb{url}
+      \verb https://cancergenome.nih.gov/newsevents/newsannouncements/news_12_13_2005
+      \endverb
+    \endentry
     \entry{novembre_interpreting_2008}{article}{}
       \name{author}{2}{}{%
         {{hash=a7927a8824a0f712ecfe132cf49cb14c}{%
@@ -5593,6 +5611,25 @@
       \endverb
       \verb{url}
       \verb http://broadinstitute.github.io/picard/
+      \endverb
+    \endentry
+    \entry{_program_2016}{online}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Explore how The Cancer Genome Atlas works, the components of the TCGA Research Network and TCGA's place in the cancer genomics field in the Program Overview.}
+      \field{journaltitle}{The Cancer Genome Atlas - National Cancer Institute}
+      \field{title}{Program {{Overview}}}
+      \field{type}{{{nciGeneral}}}
+      \field{urlday}{07}
+      \field{urlmonth}{12}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \verb{file}
+      \verb Snapshot:/Users/ijoseph/Library/Application Support/Zotero/Profiles/gtzxqh9t.default/zotero/storage/UG62GX9E/Program Overview.html:text/html
+      \endverb
+      \verb{url}
+      \verb https://cancergenome.nih.gov/abouttcga/overview
       \endverb
     \endentry
     \entry{rapkins_mgmt_2015}{article}{}

@@ -1,15 +1,15 @@
 [0] Config.pm:343> INFO - This is Biber 2.5
-[0] Config.pm:346> INFO - Logfile is '/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.blg'
-[58] biber-darwin:290> INFO - === Mon Dec  5, 2016, 19:29:18
-[87] Biber.pm:351> INFO - Reading '/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.bcf'
-[209] Biber.pm:776> INFO - Found 79 citekeys in bib section 0
-[226] Biber.pm:3493> INFO - Processing section 0
-[246] Biber.pm:3657> INFO - Looking for bibtex format file 'references.bib' for section 0
-[495] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
-[730] bibtex.pm:1048> INFO - Found BibTeX data source 'references.bib'
-[1349] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1349] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1349] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[1349] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
-[1548] bbl.pm:526> INFO - Writing '/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.bbl' with encoding 'UTF-8'
-[1589] bbl.pm:619> INFO - Output to /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.bbl
+[1] Config.pm:346> INFO - Logfile is '/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.blg'
+[58] biber-darwin:290> INFO - === Wed Dec  7, 2016, 15:37:49
+[84] Biber.pm:351> INFO - Reading '/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.bcf'
+[208] Biber.pm:776> INFO - Found 81 citekeys in bib section 0
+[225] Biber.pm:3493> INFO - Processing section 0
+[242] Biber.pm:3657> INFO - Looking for bibtex format file 'references.bib' for section 0
+[483] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[723] bibtex.pm:1048> INFO - Found BibTeX data source 'references.bib'
+[1378] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1378] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1378] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[1378] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
+[1645] bbl.pm:526> INFO - Writing '/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.bbl' with encoding 'UTF-8'
+[1687] bbl.pm:619> INFO - Output to /Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/output/thesis.bbl

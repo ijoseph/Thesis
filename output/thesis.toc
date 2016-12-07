@@ -34,7 +34,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Gene expression}{7}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Somatic mutations}{7}{section*.14}
+\contentsline {subsubsection}{Somatic mutations}{8}{section*.14}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{DNA methylation}{8}{section*.15}
 \defcounter {refsection}{0}\relax 
@@ -42,7 +42,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Integrated sequencing methods}{8}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Properties of analyzed data}{9}{chapter.2}
+\contentsline {chapter}{\chapternumberline {2}Data types for precision medicine}{9}{chapter.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}The Cancer Genome Atlas}{9}{section.2.1}
 \defcounter {refsection}{0}\relax 
@@ -52,7 +52,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Exome sequencing}{9}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Deep whole-genome sequencing}{9}{section*.21}
+\contentsline {subsubsection}{Deep whole-genome sequencing}{10}{section*.21}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{``Low-pass'' whole-genome sequencing}{10}{section*.22}
 \defcounter {refsection}{0}\relax 
@@ -82,7 +82,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{DNA copy number}{13}{section*.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Somatic mutations}{13}{section*.37}
+\contentsline {subsubsection}{Somatic mutations}{14}{section*.37}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{RNA-sequencing}{14}{section*.38}
 \defcounter {refsection}{0}\relax 
@@ -90,7 +90,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Cancer Genome Project}{14}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Cancer types}{14}{section*.41}
+\contentsline {subsection}{Cancer types}{15}{section*.41}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Compounds information}{16}{section*.43}
 \defcounter {refsection}{0}\relax 
@@ -184,11 +184,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Formal model specification}{36}{section*.85}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Consistency of model structure and genomics assumptions}{38}{section*.87}
+\contentsline {subsubsection}{Consistency of model structure and genomics assumptions}{37}{section*.87}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Implementation}{38}{section*.89}
+\contentsline {subsubsection}{Implementation}{39}{section*.89}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Results}{38}{section.4.4}
+\contentsline {section}{\numberline {4.4}Results}{39}{section.4.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Assessment}{39}{section*.90}
 \defcounter {refsection}{0}\relax 
@@ -200,13 +200,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Simulated data}{40}{section*.94}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{$\mathbf {p \ll N}$}{41}{section*.95}
+\contentsline {subsubsection}{$\mathbf {p \ll N}$}{40}{section*.95}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{$\mathbf {p \gg N}$}{41}{section*.104}
+\contentsline {subsubsection}{$\mathbf {p \gg N}$}{49}{section*.104}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Cancer Genome Project}{41}{section*.109}
+\contentsline {subsection}{Cancer Genome Project}{49}{section*.109}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Glioma outcome prediction}{54}{section*.114}
+\contentsline {subsection}{Glioma outcome prediction}{49}{section*.114}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.5}Discussion}{59}{section.4.5}
 \defcounter {refsection}{0}\relax 
@@ -234,34 +234,34 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Model improvement opportunities}{63}{section*.124}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{65}{section*.126}
+\contentsline {chapter}{Bibliography}{64}{section*.126}
 \defcounter {refsection}{0}\relax 
-\contentsline {appendix}{\chapternumberline {A}Three-node model formulation}{74}{chapter.A}
+\contentsline {appendix}{\chapternumberline {A}Three-node model formulation}{73}{chapter.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Model}{74}{section.A.1}
+\contentsline {section}{\numberline {A.1}Model}{73}{section.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Complete log-likelihood}{75}{section.A.2}
+\contentsline {section}{\numberline {A.2}Complete log-likelihood}{74}{section.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}M-Step: finding critical points}{76}{section.A.3}
+\contentsline {section}{\numberline {A.3}M-Step: finding critical points}{75}{section.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{$\mathbf {W}$}{76}{section*.127}
+\contentsline {subsection}{$\mathbf {W}$}{75}{section*.127}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{$\mathbf {\Psi }$}{77}{section*.128}
+\contentsline {subsection}{$\mathbf {\Psi }$}{76}{section*.128}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}E-Step: finding posterior conditional distribution}{79}{section.A.4}
+\contentsline {section}{\numberline {A.4}E-Step: finding posterior conditional distribution}{78}{section.A.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Working with precision matrix}{80}{section*.129}
+\contentsline {subsection}{Working with precision matrix}{79}{section*.129}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Finding $\mathaccentV {vec}17E{\mu }_{z|x}$ by expanding $(5)$}{80}{section*.130}
+\contentsline {subsubsection}{Finding $\mathaccentV {vec}17E{\mu }_{z|x}$ by expanding $(5)$}{79}{section*.130}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Finding conditional distribution of outcome observed variable given input observed variables}{81}{section.A.5}
+\contentsline {section}{\numberline {A.5}Finding conditional distribution of outcome observed variable given input observed variables}{80}{section.A.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Partitioning}{81}{section*.131}
+\contentsline {subsection}{Partitioning}{80}{section*.131}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Direct}{82}{section*.132}
+\contentsline {subsection}{Direct}{81}{section*.132}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.6}Finding $\mathbf {\Theta }$ for warm starts where child node is of lower dimension than parent}{83}{section.A.6}
+\contentsline {section}{\numberline {A.6}Finding $\mathbf {\Theta }$ for warm starts where child node is of lower dimension than parent}{82}{section.A.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Proof}{83}{section*.133}
+\contentsline {subsection}{Proof}{82}{section*.133}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Example}{84}{section*.134}
+\contentsline {subsection}{Example}{83}{section*.134}
