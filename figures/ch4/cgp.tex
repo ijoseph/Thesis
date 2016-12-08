@@ -4,7 +4,12 @@
   \qquad \\
   \subfloat[][Under-fit: $z_1 = 2, z_2 = 3$ .]{        \includegraphics[width=.4\textwidth]{{/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch4/cgp/mfaa_under_roc}.pdf}}%
   \qquad \\
- get\subfloat[][getOver-fit: $z_1 = 62, z_2 = 65$.]{        \includegraphics[width=.4\textwidth]{{/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch4/cgp/mfaa_over_roc}.pdf}}%
+\subfloat[][Closest to overfitting as possible: $z_1 = 62, z_2 =
+65$. Note that the same AUC was the well-fit model was achieved at
+this latent dimensionality. Higher latent dimensionality, which would
+likely allow for AUC-degrading overfitting, was not possible as the
+model currently is not implemented for latent dimensions higher than
+the above.]{        \includegraphics[width=.4\textwidth]{{/Users/ijoseph/Documents/Work/Graduate-Thesis/TeX/figures/ch4/cgp/mfaa_over_roc}.pdf}}%
   \caption{HFAM ROC curves for different levels of model
     complexity.} \label{fourcgpone}
 \end{figure}
