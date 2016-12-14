@@ -158,6 +158,8 @@ INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/tools/afterpage.sty
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/tools/afterpage.sty
 INPUT math-header.tex
 INPUT math-header.tex
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
