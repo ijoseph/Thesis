@@ -1,4 +1,4 @@
-# UC Berkeley PhD thesis 
+# UC Berkeley PhD Dissertation 
 
 
 [Here it is.](output/thesis.pdf)
